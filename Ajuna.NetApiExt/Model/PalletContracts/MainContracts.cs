@@ -207,7 +207,7 @@ namespace Ajuna.NetApi.Model.PalletContracts
     
     /// <summary>
     /// >> Instantiated
-    /// Contract deployed by address at the specified address. \[deployer, contract\]
+    /// Contract deployed by address at the specified address.
     /// </summary>
     public sealed class EventInstantiated : BaseTuple<Ajuna.NetApi.Model.SpCore.AccountId32, Ajuna.NetApi.Model.SpCore.AccountId32>
     {
@@ -216,12 +216,6 @@ namespace Ajuna.NetApi.Model.PalletContracts
     /// <summary>
     /// >> Terminated
     /// Contract has been removed.
-    /// \[contract, beneficiary\]
-    /// 
-    /// # Params
-    /// 
-    /// - `contract`: The contract that was terminated.
-    /// - `beneficiary`: The account that received the contracts remaining balance.
     /// 
     /// # Note
     /// 
@@ -234,7 +228,7 @@ namespace Ajuna.NetApi.Model.PalletContracts
     
     /// <summary>
     /// >> CodeStored
-    /// Code with the specified hash has been stored. \[code_hash\]
+    /// Code with the specified hash has been stored.
     /// </summary>
     public sealed class EventCodeStored : BaseTuple<Ajuna.NetApi.Model.PrimitiveTypes.H256>
     {
@@ -243,11 +237,6 @@ namespace Ajuna.NetApi.Model.PalletContracts
     /// <summary>
     /// >> ScheduleUpdated
     /// Triggered when the current schedule is updated.
-    /// \[version\]
-    /// 
-    /// # Params
-    /// 
-    /// - `version`: The version of the newly set schedule.
     /// </summary>
     public sealed class EventScheduleUpdated : BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32>
     {
@@ -256,13 +245,6 @@ namespace Ajuna.NetApi.Model.PalletContracts
     /// <summary>
     /// >> ContractEmitted
     /// A custom event emitted by the contract.
-    /// \[contract, data\]
-    /// 
-    /// # Params
-    /// 
-    /// - `contract`: The contract that emitted the event.
-    /// - `data`: Data supplied by the contract. Metadata generated during contract compilation
-    ///   is needed to decode it.
     /// </summary>
     public sealed class EventContractEmitted : BaseTuple<Ajuna.NetApi.Model.SpCore.AccountId32, BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>>
     {
@@ -271,7 +253,6 @@ namespace Ajuna.NetApi.Model.PalletContracts
     /// <summary>
     /// >> CodeRemoved
     /// A code with the specified hash was removed.
-    /// \[code_hash\]
     /// 
     /// This happens when the last contract that uses this code hash was removed.
     /// </summary>

@@ -195,9 +195,7 @@ namespace Ajuna.NetApi.Model.PalletSession
         
         /// <summary>
         /// >> set_keys
-        /// Dispatchable calls.
-        /// 
-        /// Each variant of this enum maps to a dispatchable function from the associated module.
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
         public static Method SetKeys(Ajuna.NetApi.Model.NodeRuntime.SessionKeys keys, BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8> proof)
         {
@@ -209,9 +207,7 @@ namespace Ajuna.NetApi.Model.PalletSession
         
         /// <summary>
         /// >> purge_keys
-        /// Dispatchable calls.
-        /// 
-        /// Each variant of this enum maps to a dispatchable function from the associated module.
+        /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
         public static Method PurgeKeys()
         {

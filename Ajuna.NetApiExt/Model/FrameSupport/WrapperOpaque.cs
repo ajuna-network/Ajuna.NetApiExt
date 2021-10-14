@@ -9,6 +9,7 @@
 
 using Ajuna.NetApi.Model.PalletImOnline;
 using Ajuna.NetApi.Model.Types.Base;
+using Ajuna.NetApi.Model.Types.Primitive;
 using System;
 using System.Collections.Generic;
 
@@ -24,11 +25,15 @@ namespace Ajuna.NetApi.Model.FrameSupport
     {
         
         /// <summary>
-        /// >> value
         /// </summary>
-        private Ajuna.NetApi.Model.PalletImOnline.BoundedOpaqueNetworkState _value;
+        private BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> _value;
         
-        public Ajuna.NetApi.Model.PalletImOnline.BoundedOpaqueNetworkState Value
+        /// <summary>
+        /// >> T
+        /// </summary>
+        private Ajuna.NetApi.Model.PalletImOnline.BoundedOpaqueNetworkState _t;
+        
+        public BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> Value
         {
             get
             {
@@ -37,6 +42,18 @@ namespace Ajuna.NetApi.Model.FrameSupport
             set
             {
                 this._value = value;
+            }
+        }
+        
+        public Ajuna.NetApi.Model.PalletImOnline.BoundedOpaqueNetworkState T
+        {
+            get
+            {
+                return this._t;
+            }
+            set
+            {
+                this._t = value;
             }
         }
         
@@ -49,14 +66,17 @@ namespace Ajuna.NetApi.Model.FrameSupport
         {
             var result = new List<byte>();
             result.AddRange(Value.Encode());
+            result.AddRange(T.Encode());
             return result.ToArray();
         }
         
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Ajuna.NetApi.Model.PalletImOnline.BoundedOpaqueNetworkState();
+            Value = new BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32>();
             Value.Decode(byteArray, ref p);
+            T = new Ajuna.NetApi.Model.PalletImOnline.BoundedOpaqueNetworkState();
+            T.Decode(byteArray, ref p);
             TypeSize = p - start;
         }
     }
