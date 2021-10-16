@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SubstrateNetApiExt\Ajuna.NetApiExt.csproj" />
+    <ProjectReference Include="..\Ajuna.NetApiExt\Ajuna.NetApiExt.csproj" />
   </ItemGroup>
 
 </Project>
