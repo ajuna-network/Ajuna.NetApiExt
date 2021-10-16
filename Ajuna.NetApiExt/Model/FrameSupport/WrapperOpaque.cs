@@ -9,6 +9,7 @@
 
 using Ajuna.NetApi.Model.PalletImOnline;
 using Ajuna.NetApi.Model.Types.Base;
+using Ajuna.NetApi.Model.Types.Primitive;
 using System;
 using System.Collections.Generic;
 
@@ -24,19 +25,36 @@ namespace Ajuna.NetApi.Model.FrameSupport
     {
         
         /// <summary>
-        /// >> value
+        /// >> value0
         /// </summary>
-        private Ajuna.NetApi.Model.PalletImOnline.BoundedOpaqueNetworkState _value;
+        private BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> _value0;
         
-        public Ajuna.NetApi.Model.PalletImOnline.BoundedOpaqueNetworkState Value
+        /// <summary>
+        /// >> T
+        /// </summary>
+        private Ajuna.NetApi.Model.PalletImOnline.BoundedOpaqueNetworkState _t;
+        
+        public BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> Value0
         {
             get
             {
-                return this._value;
+                return this._value0;
             }
             set
             {
-                this._value = value;
+                this._value0 = value;
+            }
+        }
+        
+        public Ajuna.NetApi.Model.PalletImOnline.BoundedOpaqueNetworkState T
+        {
+            get
+            {
+                return this._t;
+            }
+            set
+            {
+                this._t = value;
             }
         }
         
@@ -48,15 +66,18 @@ namespace Ajuna.NetApi.Model.FrameSupport
         public override byte[] Encode()
         {
             var result = new List<byte>();
-            result.AddRange(Value.Encode());
+            result.AddRange(Value0.Encode());
+            result.AddRange(T.Encode());
             return result.ToArray();
         }
         
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Ajuna.NetApi.Model.PalletImOnline.BoundedOpaqueNetworkState();
-            Value.Decode(byteArray, ref p);
+            Value0 = new BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32>();
+            Value0.Decode(byteArray, ref p);
+            T = new Ajuna.NetApi.Model.PalletImOnline.BoundedOpaqueNetworkState();
+            T.Decode(byteArray, ref p);
             TypeSize = p - start;
         }
     }

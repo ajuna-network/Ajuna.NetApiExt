@@ -1,5 +1,5 @@
 {
-  "Origin": "ws://127.0.0.1:9944",
+  "Origin": "",
   "Magic": "0x6D657461",
   "Version": 14,
   "NodeMetadata": {
@@ -1763,12 +1763,12 @@
         ],
         "Path": [
           "pallet_session",
+          "pallet",
           "Event"
         ],
         "TypeDef": "Variant",
         "Docs": [
-          "Events for this module.",
-          ""
+          "\n\t\t\tThe [event](https://substrate.dev/docs/en/knowledgebase/runtime/events) emitted\n\t\t\tby this pallet.\n\t\t\t"
         ]
       },
       "38": {
@@ -2885,40 +2885,44 @@
             "Name": "Instantiated",
             "TypeFields": [
               {
+                "Name": "deployer",
                 "TypeName": "T::AccountId",
                 "TypeId": 0
               },
               {
+                "Name": "contract",
                 "TypeName": "T::AccountId",
                 "TypeId": 0
               }
             ],
             "Index": 0,
             "Docs": [
-              "Contract deployed by address at the specified address. \\[deployer, contract\\]"
+              "Contract deployed by address at the specified address."
             ]
           },
           {
             "Name": "Terminated",
             "TypeFields": [
               {
+                "Name": "contract",
                 "TypeName": "T::AccountId",
-                "TypeId": 0
+                "TypeId": 0,
+                "Docs": [
+                  "The contract that was terminated."
+                ]
               },
               {
+                "Name": "beneficiary",
                 "TypeName": "T::AccountId",
-                "TypeId": 0
+                "TypeId": 0,
+                "Docs": [
+                  "The account that received the contracts remaining balance"
+                ]
               }
             ],
             "Index": 1,
             "Docs": [
               "Contract has been removed.",
-              "\\[contract, beneficiary\\]",
-              "",
-              "# Params",
-              "",
-              "- `contract`: The contract that was terminated.",
-              "- `beneficiary`: The account that received the contracts remaining balance.",
               "",
               "# Note",
               "",
@@ -2930,61 +2934,64 @@
             "Name": "CodeStored",
             "TypeFields": [
               {
+                "Name": "code_hash",
                 "TypeName": "T::Hash",
                 "TypeId": 9
               }
             ],
             "Index": 2,
             "Docs": [
-              "Code with the specified hash has been stored. \\[code_hash\\]"
+              "Code with the specified hash has been stored."
             ]
           },
           {
             "Name": "ScheduleUpdated",
             "TypeFields": [
               {
+                "Name": "version",
                 "TypeName": "u32",
-                "TypeId": 4
+                "TypeId": 4,
+                "Docs": [
+                  "The version of the newly set schedule."
+                ]
               }
             ],
             "Index": 3,
             "Docs": [
-              "Triggered when the current schedule is updated.",
-              "\\[version\\]",
-              "",
-              "# Params",
-              "",
-              "- `version`: The version of the newly set schedule."
+              "Triggered when the current schedule is updated."
             ]
           },
           {
             "Name": "ContractEmitted",
             "TypeFields": [
               {
+                "Name": "contract",
                 "TypeName": "T::AccountId",
-                "TypeId": 0
+                "TypeId": 0,
+                "Docs": [
+                  "The contract that emitted the event."
+                ]
               },
               {
+                "Name": "data",
                 "TypeName": "Vec<u8>",
-                "TypeId": 10
+                "TypeId": 10,
+                "Docs": [
+                  "Data supplied by the contract. Metadata generated during contract compilation",
+                  "is needed to decode it."
+                ]
               }
             ],
             "Index": 4,
             "Docs": [
-              "A custom event emitted by the contract.",
-              "\\[contract, data\\]",
-              "",
-              "# Params",
-              "",
-              "- `contract`: The contract that emitted the event.",
-              "- `data`: Data supplied by the contract. Metadata generated during contract compilation",
-              "  is needed to decode it."
+              "A custom event emitted by the contract."
             ]
           },
           {
             "Name": "CodeRemoved",
             "TypeFields": [
               {
+                "Name": "code_hash",
                 "TypeName": "T::Hash",
                 "TypeId": 9
               }
@@ -2992,7 +2999,6 @@
             "Index": 5,
             "Docs": [
               "A code with the specified hash was removed.",
-              "\\[code_hash\\]",
               "",
               "This happens when the last contract that uses this code hash was removed."
             ]
@@ -9150,8 +9156,8 @@
               "The dispatch origin of this function must be signed.",
               "",
               "# <weight>",
-              "- Complexity: `O(1)`",
-              "  Actual cost depends on the number of length of `T::Keys::key_ids()` which is fixed.",
+              "- Complexity: `O(1)`. Actual cost depends on the number of length of",
+              "  `T::Keys::key_ids()` which is fixed.",
               "- DbReads: `origin account`, `T::ValidatorIdOf`, `NextKeys`",
               "- DbWrites: `origin account`, `NextKeys`",
               "- DbReads per key id: `KeyOwner`",
@@ -9170,8 +9176,8 @@
               "The dispatch origin of this function must be signed.",
               "",
               "# <weight>",
-              "- Complexity: `O(1)` in number of key types.",
-              "  Actual cost depends on the number of length of `T::Keys::key_ids()` which is fixed.",
+              "- Complexity: `O(1)` in number of key types. Actual cost depends on the number of length",
+              "  of `T::Keys::key_ids()` which is fixed.",
               "- DbReads: `T::ValidatorIdOf`, `NextKeys`, `origin account`",
               "- DbWrites: `NextKeys`, `origin account`",
               "- DbWrites per key id: `KeyOwner`",
@@ -9181,6 +9187,7 @@
         ],
         "Path": [
           "pallet_session",
+          "pallet",
           "Call"
         ],
         "TypeParams": [
@@ -9190,9 +9197,7 @@
         ],
         "TypeDef": "Variant",
         "Docs": [
-          "Dispatchable calls.",
-          "",
-          "Each variant of this enum maps to a dispatchable function from the associated module."
+          "Contains one variant per dispatchable that can be called by an extrinsic."
         ]
       },
       "206": {
@@ -19286,6 +19291,7 @@
         ],
         "Path": [
           "pallet_session",
+          "pallet",
           "Error"
         ],
         "TypeParams": [
@@ -19295,7 +19301,7 @@
         ],
         "TypeDef": "Variant",
         "Docs": [
-          "Error for the session module."
+          "Error for the session pallet."
         ]
       },
       "368": {
@@ -21844,6 +21850,9 @@
       },
       "416": {
         "TypeFields": [
+          {
+            "TypeId": 98
+          },
           {
             "TypeName": "T",
             "TypeId": 417
@@ -33061,7 +33070,7 @@
           {
             "Name": "IgnoredIssuance",
             "TypeId": 6,
-            "Value": "KKseVDfH9gkAAAAAAAAAAA==",
+            "Value": "AAAAAAAAAAAAAAAAAAAAAA==",
             "Docs": [
               " The issuance to ignore. This is subtracted from the `Currency`'s `total_issuance` to get",
               " the issuance by which we inflate or deflate the gilt."
