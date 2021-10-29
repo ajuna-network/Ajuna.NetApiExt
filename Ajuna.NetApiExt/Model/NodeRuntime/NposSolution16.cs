@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.NodeRuntime
     
     
     /// <summary>
-    /// >> 141 - Composite[node_runtime.NposSolution16]
+    /// >> 145 - Composite[node_runtime.NposSolution16]
     /// </summary>
     public sealed class NposSolution16 : BaseType
     {

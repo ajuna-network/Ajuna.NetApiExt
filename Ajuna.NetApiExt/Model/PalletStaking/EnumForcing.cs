@@ -29,7 +29,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
     }
     
     /// <summary>
-    /// >> 355 - Variant[pallet_staking.Forcing]
+    /// >> 362 - Variant[pallet_staking.Forcing]
     /// </summary>
     public sealed class EnumForcing : BaseEnum<Forcing>
     {

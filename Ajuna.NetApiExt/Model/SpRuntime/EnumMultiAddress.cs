@@ -34,7 +34,7 @@ namespace Ajuna.NetApi.Model.SpRuntime
     }
     
     /// <summary>
-    /// >> 137 - Variant[sp_runtime.multiaddress.MultiAddress]
+    /// >> 141 - Variant[sp_runtime.multiaddress.MultiAddress]
     /// </summary>
     public sealed class EnumMultiAddress : BaseEnumExt<MultiAddress, Ajuna.NetApi.Model.SpCore.AccountId32, BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32>, BaseVec<Ajuna.NetApi.Model.Types.Primitive.U8>, Ajuna.NetApi.Model.Base.Arr32U8, Ajuna.NetApi.Model.Base.Arr20U8>
     {

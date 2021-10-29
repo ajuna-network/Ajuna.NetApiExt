@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletProxy
     
     
     /// <summary>
-    /// >> 464 - Composite[pallet_proxy.ProxyDefinition]
+    /// >> 473 - Composite[pallet_proxy.ProxyDefinition]
     /// </summary>
     public sealed class ProxyDefinition : BaseType
     {

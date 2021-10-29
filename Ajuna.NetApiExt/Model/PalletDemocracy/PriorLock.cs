@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletDemocracy
     
     
     /// <summary>
-    /// >> 379 - Composite[pallet_democracy.vote.PriorLock]
+    /// >> 388 - Composite[pallet_democracy.vote.PriorLock]
     /// </summary>
     public sealed class PriorLock : BaseType
     {

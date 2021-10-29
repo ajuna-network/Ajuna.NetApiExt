@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.SpStaking
     
     
     /// <summary>
-    /// >> 422 - Composite[sp_staking.offence.OffenceDetails]
+    /// >> 431 - Composite[sp_staking.offence.OffenceDetails]
     /// </summary>
     public sealed class OffenceDetails : BaseType
     {

@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletBagsList
     
     
     /// <summary>
-    /// >> 506 - Composite[pallet_bags_list.list.Node]
+    /// >> 515 - Composite[pallet_bags_list.list.Node]
     /// </summary>
     public sealed class Node : BaseType
     {

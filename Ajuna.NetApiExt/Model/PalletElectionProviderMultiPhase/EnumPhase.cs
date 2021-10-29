@@ -30,7 +30,7 @@ namespace Ajuna.NetApi.Model.PalletElectionProviderMultiPhase
     }
     
     /// <summary>
-    /// >> 333 - Variant[pallet_election_provider_multi_phase.Phase]
+    /// >> 340 - Variant[pallet_election_provider_multi_phase.Phase]
     /// </summary>
     public sealed class EnumPhase : BaseEnumExt<Phase, BaseVoid, BaseVoid, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.Bool,Ajuna.NetApi.Model.Types.Primitive.U32>, BaseVoid>
     {

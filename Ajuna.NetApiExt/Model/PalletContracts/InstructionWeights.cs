@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletContracts
     
     
     /// <summary>
-    /// >> 410 - Composite[pallet_contracts.schedule.InstructionWeights]
+    /// >> 419 - Composite[pallet_contracts.schedule.InstructionWeights]
     /// </summary>
     public sealed class InstructionWeights : BaseType
     {

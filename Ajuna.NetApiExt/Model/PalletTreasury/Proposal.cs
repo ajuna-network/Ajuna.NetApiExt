@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletTreasury
     
     
     /// <summary>
-    /// >> 398 - Composite[pallet_treasury.Proposal]
+    /// >> 407 - Composite[pallet_treasury.Proposal]
     /// </summary>
     public sealed class Proposal : BaseType
     {

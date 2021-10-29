@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletLottery
     
     
     /// <summary>
-    /// >> 486 - Composite[pallet_lottery.LotteryConfig]
+    /// >> 495 - Composite[pallet_lottery.LotteryConfig]
     /// </summary>
     public sealed class LotteryConfig : BaseType
     {

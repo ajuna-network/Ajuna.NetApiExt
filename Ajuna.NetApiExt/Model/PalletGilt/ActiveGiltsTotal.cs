@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletGilt
     
     
     /// <summary>
-    /// >> 492 - Composite[pallet_gilt.pallet.ActiveGiltsTotal]
+    /// >> 501 - Composite[pallet_gilt.pallet.ActiveGiltsTotal]
     /// </summary>
     public sealed class ActiveGiltsTotal : BaseType
     {

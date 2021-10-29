@@ -28,7 +28,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
     }
     
     /// <summary>
-    /// >> 94 - Variant[frame_system.Phase]
+    /// >> 98 - Variant[frame_system.Phase]
     /// </summary>
     public sealed class EnumPhase : BaseEnumExt<Phase, Ajuna.NetApi.Model.Types.Primitive.U32, BaseVoid, BaseVoid>
     {

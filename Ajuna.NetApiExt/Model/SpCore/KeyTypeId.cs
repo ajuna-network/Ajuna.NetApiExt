@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpCore
     
     
     /// <summary>
-    /// >> 366 - Composite[sp_core.crypto.KeyTypeId]
+    /// >> 375 - Composite[sp_core.crypto.KeyTypeId]
     /// </summary>
     public sealed class KeyTypeId : BaseType
     {

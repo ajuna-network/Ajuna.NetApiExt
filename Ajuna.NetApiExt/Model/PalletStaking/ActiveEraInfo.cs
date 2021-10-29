@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
     
     
     /// <summary>
-    /// >> 349 - Composite[pallet_staking.ActiveEraInfo]
+    /// >> 356 - Composite[pallet_staking.ActiveEraInfo]
     /// </summary>
     public sealed class ActiveEraInfo : BaseType
     {

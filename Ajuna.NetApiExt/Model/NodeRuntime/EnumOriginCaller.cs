@@ -31,7 +31,7 @@ namespace Ajuna.NetApi.Model.NodeRuntime
     }
     
     /// <summary>
-    /// >> 455 - Variant[node_runtime.OriginCaller]
+    /// >> 464 - Variant[node_runtime.OriginCaller]
     /// </summary>
     public sealed class EnumOriginCaller : BaseEnumExt<OriginCaller, Ajuna.NetApi.Model.FrameSystem.EnumRawOrigin, Ajuna.NetApi.Model.PalletCollective.EnumRawOrigin, Ajuna.NetApi.Model.PalletCollective.EnumRawOrigin, Ajuna.NetApi.Model.Types.Base.BaseVoid>
     {

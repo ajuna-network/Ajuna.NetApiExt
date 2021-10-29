@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletScheduler
     
     
     /// <summary>
-    /// >> 454 - Composite[pallet_scheduler.ScheduledV2]
+    /// >> 463 - Composite[pallet_scheduler.ScheduledV2]
     /// </summary>
     public sealed class ScheduledV2 : BaseType
     {

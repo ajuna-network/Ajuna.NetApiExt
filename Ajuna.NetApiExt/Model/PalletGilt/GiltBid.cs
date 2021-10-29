@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletGilt
     
     
     /// <summary>
-    /// >> 491 - Composite[pallet_gilt.pallet.GiltBid]
+    /// >> 500 - Composite[pallet_gilt.pallet.GiltBid]
     /// </summary>
     public sealed class GiltBid : BaseType
     {

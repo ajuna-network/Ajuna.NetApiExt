@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletElectionProviderMultiPhase
     
     
     /// <summary>
-    /// >> 140 - Composite[pallet_election_provider_multi_phase.RawSolution]
+    /// >> 144 - Composite[pallet_election_provider_multi_phase.RawSolution]
     /// </summary>
     public sealed class RawSolution : BaseType
     {

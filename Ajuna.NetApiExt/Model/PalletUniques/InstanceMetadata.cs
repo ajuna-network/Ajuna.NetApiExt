@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
     
     
     /// <summary>
-    /// >> 499 - Composite[pallet_uniques.types.InstanceMetadata]
+    /// >> 508 - Composite[pallet_uniques.types.InstanceMetadata]
     /// </summary>
     public sealed class InstanceMetadata : BaseType
     {
@@ -32,7 +32,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
         /// <summary>
         /// >> data
         /// </summary>
-        private Ajuna.NetApi.Model.FrameSupport.BoundedVec _data;
+        private Ajuna.NetApi.Model.FrameSupport.BoundedVecT1 _data;
         
         /// <summary>
         /// >> is_frozen
@@ -51,7 +51,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
             }
         }
         
-        public Ajuna.NetApi.Model.FrameSupport.BoundedVec Data
+        public Ajuna.NetApi.Model.FrameSupport.BoundedVecT1 Data
         {
             get
             {
@@ -94,7 +94,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
             var start = p;
             Deposit = new Ajuna.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Data = new Ajuna.NetApi.Model.FrameSupport.BoundedVec();
+            Data = new Ajuna.NetApi.Model.FrameSupport.BoundedVecT1();
             Data.Decode(byteArray, ref p);
             IsFrozen = new Ajuna.NetApi.Model.Types.Primitive.Bool();
             IsFrozen.Decode(byteArray, ref p);

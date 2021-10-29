@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
     
     
     /// <summary>
-    /// >> 97 - Composite[frame_system.LastRuntimeUpgradeInfo]
+    /// >> 101 - Composite[frame_system.LastRuntimeUpgradeInfo]
     /// </summary>
     public sealed class LastRuntimeUpgradeInfo : BaseType
     {

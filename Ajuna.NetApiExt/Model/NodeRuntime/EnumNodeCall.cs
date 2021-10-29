@@ -88,10 +88,16 @@ namespace Ajuna.NetApi.Model.NodeRuntime
         TransactionStorage,
         
         BagsList,
+        
+        BoilerPlate,
+        
+        ConnectFourMama,
+        
+        ConnectFour,
     }
     
     /// <summary>
-    /// >> 120 - Variant[node_runtime.Call]
+    /// >> 124 - Variant[node_runtime.Call]
     /// </summary>
     public sealed class EnumNodeCall : BaseEnum<NodeCall>
     {

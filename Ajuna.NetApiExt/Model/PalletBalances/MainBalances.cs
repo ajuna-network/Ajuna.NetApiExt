@@ -39,9 +39,9 @@ namespace Ajuna.NetApi.Model.PalletBalances
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Balances", "Account"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(Ajuna.NetApi.Model.PalletBalances.AccountData)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Balances", "Locks"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
-                            Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec)));
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT2)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Balances", "Reserves"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
-                            Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(Ajuna.NetApi.Model.FrameSupport.BoundedVec)));
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(Ajuna.NetApi.Model.FrameSupport.BoundedVecT6)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Balances", "StorageVersion"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.PalletBalances.EnumReleases)));
         }
         
@@ -106,10 +106,10 @@ namespace Ajuna.NetApi.Model.PalletBalances
         ///  Any liquidity locks on some account balances.
         ///  NOTE: Should only be accessed when setting, changing and freeing a lock.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec> Locks(Ajuna.NetApi.Model.SpCore.AccountId32 key, CancellationToken token)
+        public async Task<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT2> Locks(Ajuna.NetApi.Model.SpCore.AccountId32 key, CancellationToken token)
         {
             string parameters = BalancesStorage.LocksParams(key);
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec>(parameters, token);
+            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT2>(parameters, token);
         }
         
         /// <summary>
@@ -127,10 +127,10 @@ namespace Ajuna.NetApi.Model.PalletBalances
         /// >> Reserves
         ///  Named reserves on some account balances.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.FrameSupport.BoundedVec> Reserves(Ajuna.NetApi.Model.SpCore.AccountId32 key, CancellationToken token)
+        public async Task<Ajuna.NetApi.Model.FrameSupport.BoundedVecT6> Reserves(Ajuna.NetApi.Model.SpCore.AccountId32 key, CancellationToken token)
         {
             string parameters = BalancesStorage.ReservesParams(key);
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.BoundedVec>(parameters, token);
+            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.BoundedVecT6>(parameters, token);
         }
         
         /// <summary>
@@ -269,14 +269,6 @@ namespace Ajuna.NetApi.Model.PalletBalances
     }
     
     /// <summary>
-    /// >> Deposit
-    /// Some amount was deposited (e.g. for transaction fees). \[who, deposit\]
-    /// </summary>
-    public sealed class EventDeposit : BaseTuple<Ajuna.NetApi.Model.SpCore.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U128>
-    {
-    }
-    
-    /// <summary>
     /// >> Reserved
     /// Some balance was reserved (moved from free to reserved). \[who, value\]
     /// </summary>
@@ -299,6 +291,32 @@ namespace Ajuna.NetApi.Model.PalletBalances
     /// \[from, to, balance, destination_status\]
     /// </summary>
     public sealed class EventReserveRepatriated : BaseTuple<Ajuna.NetApi.Model.SpCore.AccountId32, Ajuna.NetApi.Model.SpCore.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U128, Ajuna.NetApi.Model.FrameSupport.EnumBalanceStatus>
+    {
+    }
+    
+    /// <summary>
+    /// >> Deposit
+    /// Some amount was deposited into the account (e.g. for transaction fees). \[who,
+    /// deposit\]
+    /// </summary>
+    public sealed class EventDeposit : BaseTuple<Ajuna.NetApi.Model.SpCore.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U128>
+    {
+    }
+    
+    /// <summary>
+    /// >> Withdraw
+    /// Some amount was withdrawn from the account (e.g. for transaction fees). \[who, value\]
+    /// </summary>
+    public sealed class EventWithdraw : BaseTuple<Ajuna.NetApi.Model.SpCore.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U128>
+    {
+    }
+    
+    /// <summary>
+    /// >> Slashed
+    /// Some amount was removed from the account (e.g. for misbehavior). \[who,
+    /// amount_slashed\]
+    /// </summary>
+    public sealed class EventSlashed : BaseTuple<Ajuna.NetApi.Model.SpCore.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U128>
     {
     }
     

@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletElectionProviderMultiPhase
     
     
     /// <summary>
-    /// >> 193 - Composite[pallet_election_provider_multi_phase.SolutionOrSnapshotSize]
+    /// >> 197 - Composite[pallet_election_provider_multi_phase.SolutionOrSnapshotSize]
     /// </summary>
     public sealed class SolutionOrSnapshotSize : BaseType
     {

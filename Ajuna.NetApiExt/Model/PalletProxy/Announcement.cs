@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletProxy
     
     
     /// <summary>
-    /// >> 468 - Composite[pallet_proxy.Announcement]
+    /// >> 477 - Composite[pallet_proxy.Announcement]
     /// </summary>
     public sealed class Announcement : BaseType
     {

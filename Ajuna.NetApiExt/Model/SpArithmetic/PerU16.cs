@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpArithmetic
     
     
     /// <summary>
-    /// >> 149 - Composite[sp_arithmetic.per_things.PerU16]
+    /// >> 153 - Composite[sp_arithmetic.per_things.PerU16]
     /// </summary>
     public sealed class PerU16 : BaseType
     {

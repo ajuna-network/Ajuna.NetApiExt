@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletElectionsPhragmen
     
     
     /// <summary>
-    /// >> 390 - Composite[pallet_elections_phragmen.SeatHolder]
+    /// >> 399 - Composite[pallet_elections_phragmen.SeatHolder]
     /// </summary>
     public sealed class SeatHolder : BaseType
     {

@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.FinalityGrandpa
     
     
     /// <summary>
-    /// >> 228 - Composite[finality_grandpa.Precommit]
+    /// >> 232 - Composite[finality_grandpa.Precommit]
     /// </summary>
     public sealed class Precommit : BaseType
     {

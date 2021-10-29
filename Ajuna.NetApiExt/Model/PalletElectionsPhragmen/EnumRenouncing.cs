@@ -28,7 +28,7 @@ namespace Ajuna.NetApi.Model.PalletElectionsPhragmen
     }
     
     /// <summary>
-    /// >> 216 - Variant[pallet_elections_phragmen.Renouncing]
+    /// >> 220 - Variant[pallet_elections_phragmen.Renouncing]
     /// </summary>
     public sealed class EnumRenouncing : BaseEnumExt<Renouncing, BaseVoid, BaseVoid, BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32>>
     {

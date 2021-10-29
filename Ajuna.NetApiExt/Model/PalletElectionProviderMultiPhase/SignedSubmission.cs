@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletElectionProviderMultiPhase
     
     
     /// <summary>
-    /// >> 343 - Composite[pallet_election_provider_multi_phase.signed.SignedSubmission]
+    /// >> 350 - Composite[pallet_election_provider_multi_phase.signed.SignedSubmission]
     /// </summary>
     public sealed class SignedSubmission : BaseType
     {

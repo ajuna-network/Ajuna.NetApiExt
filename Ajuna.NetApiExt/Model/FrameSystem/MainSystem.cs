@@ -40,7 +40,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "Account"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(Ajuna.NetApi.Model.FrameSystem.AccountInfo)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "ExtrinsicCount"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "BlockWeight"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.PerDispatchClass)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "BlockWeight"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.PerDispatchClassT1)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "AllExtrinsicsLen"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("System", "BlockHash"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Ajuna.NetApi.Model.Types.Primitive.U32), typeof(Ajuna.NetApi.Model.PrimitiveTypes.H256)));
@@ -112,10 +112,10 @@ namespace Ajuna.NetApi.Model.FrameSystem
         /// >> BlockWeight
         ///  The current weight for the block.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.FrameSupport.PerDispatchClass> BlockWeight(CancellationToken token)
+        public async Task<Ajuna.NetApi.Model.FrameSupport.PerDispatchClassT1> BlockWeight(CancellationToken token)
         {
             string parameters = SystemStorage.BlockWeightParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.PerDispatchClass>(parameters, token);
+            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.PerDispatchClassT1>(parameters, token);
         }
         
         /// <summary>

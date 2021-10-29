@@ -27,7 +27,7 @@ namespace Ajuna.NetApi.Model.PalletDemocracy
     }
     
     /// <summary>
-    /// >> 372 - Variant[pallet_democracy.types.ReferendumInfo]
+    /// >> 381 - Variant[pallet_democracy.types.ReferendumInfo]
     /// </summary>
     public sealed class EnumReferendumInfo : BaseEnumExt<ReferendumInfo, Ajuna.NetApi.Model.PalletDemocracy.ReferendumStatus, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.Bool, Ajuna.NetApi.Model.Types.Primitive.U32>>
     {

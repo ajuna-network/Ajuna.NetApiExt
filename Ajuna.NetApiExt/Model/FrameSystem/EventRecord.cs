@@ -33,7 +33,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
         /// <summary>
         /// >> event
         /// </summary>
-        private Ajuna.NetApi.Model.NodeRuntime.EnumNodeEvent _event;
+        private Ajuna.NetApi.Model.NodeRuntime.NodeEvent _event;
         
         /// <summary>
         /// >> topics
@@ -52,7 +52,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
             }
         }
         
-        public Ajuna.NetApi.Model.NodeRuntime.EnumNodeEvent Event
+        public Ajuna.NetApi.Model.NodeRuntime.NodeEvent Event
         {
             get
             {
@@ -95,7 +95,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
             var start = p;
             Phase = new Ajuna.NetApi.Model.FrameSystem.EnumPhase();
             Phase.Decode(byteArray, ref p);
-            Event = new Ajuna.NetApi.Model.NodeRuntime.EnumNodeEvent();
+            Event = new Ajuna.NetApi.Model.NodeRuntime.NodeEvent();
             Event.Decode(byteArray, ref p);
             Topics = new BaseVec<Ajuna.NetApi.Model.PrimitiveTypes.H256>();
             Topics.Decode(byteArray, ref p);

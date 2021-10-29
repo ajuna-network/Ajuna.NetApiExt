@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletAssets
     
     
     /// <summary>
-    /// >> 481 - Composite[pallet_assets.types.AssetBalance]
+    /// >> 490 - Composite[pallet_assets.types.AssetBalance]
     /// </summary>
     public sealed class AssetBalance : BaseType
     {

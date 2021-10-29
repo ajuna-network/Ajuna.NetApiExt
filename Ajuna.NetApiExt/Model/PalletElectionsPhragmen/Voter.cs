@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletElectionsPhragmen
     
     
     /// <summary>
-    /// >> 391 - Composite[pallet_elections_phragmen.Voter]
+    /// >> 400 - Composite[pallet_elections_phragmen.Voter]
     /// </summary>
     public sealed class Voter : BaseType
     {

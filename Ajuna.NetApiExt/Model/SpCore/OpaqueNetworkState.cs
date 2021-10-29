@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpCore
     
     
     /// <summary>
-    /// >> 235 - Composite[sp_core.offchain.OpaqueNetworkState]
+    /// >> 239 - Composite[sp_core.offchain.OpaqueNetworkState]
     /// </summary>
     public sealed class OpaqueNetworkState : BaseType
     {

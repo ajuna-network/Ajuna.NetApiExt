@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.FrameSupport
     
     
     /// <summary>
-    /// >> 339 - Composite[frame_support.storage.bounded_btree_map.BoundedBTreeMap]
+    /// >> 346 - Composite[frame_support.storage.bounded_btree_map.BoundedBTreeMap]
     /// </summary>
     public sealed class BoundedBTreeMap : BaseType
     {
@@ -26,9 +26,9 @@ namespace Ajuna.NetApi.Model.FrameSupport
         /// <summary>
         /// >> value
         /// </summary>
-        private Ajuna.NetApi.Model.Base.BTreeMap _value;
+        private Ajuna.NetApi.Model.Base.BTreeMapT1 _value;
         
-        public Ajuna.NetApi.Model.Base.BTreeMap Value
+        public Ajuna.NetApi.Model.Base.BTreeMapT1 Value
         {
             get
             {
@@ -55,7 +55,7 @@ namespace Ajuna.NetApi.Model.FrameSupport
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Value = new Ajuna.NetApi.Model.Base.BTreeMap();
+            Value = new Ajuna.NetApi.Model.Base.BTreeMapT1();
             Value.Decode(byteArray, ref p);
             TypeSize = p - start;
         }

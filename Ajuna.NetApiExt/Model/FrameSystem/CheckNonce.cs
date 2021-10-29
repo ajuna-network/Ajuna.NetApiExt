@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
     
     
     /// <summary>
-    /// >> 519 - Composite[frame_system.extensions.check_nonce.CheckNonce]
+    /// >> 537 - Composite[frame_system.extensions.check_nonce.CheckNonce]
     /// </summary>
     public sealed class CheckNonce : BaseType
     {

@@ -23,7 +23,7 @@ namespace Ajuna.NetApi.Model.PalletDemocracy
     }
     
     /// <summary>
-    /// >> 382 - Variant[pallet_democracy.Releases]
+    /// >> 391 - Variant[pallet_democracy.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

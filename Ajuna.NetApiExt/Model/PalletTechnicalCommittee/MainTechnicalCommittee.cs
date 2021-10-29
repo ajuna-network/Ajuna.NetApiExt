@@ -36,7 +36,7 @@ namespace Ajuna.NetApi.Model.PalletTechnicalCommittee
         public TechnicalCommitteeStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("TechnicalCommittee", "Proposals"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.BoundedVec)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("TechnicalCommittee", "Proposals"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.BoundedVecT8)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("TechnicalCommittee", "ProposalOf"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Ajuna.NetApi.Model.PrimitiveTypes.H256), typeof(Ajuna.NetApi.Model.NodeRuntime.EnumNodeCall)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("TechnicalCommittee", "Voting"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
@@ -59,10 +59,10 @@ namespace Ajuna.NetApi.Model.PalletTechnicalCommittee
         /// >> Proposals
         ///  The hashes of the active proposals.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.FrameSupport.BoundedVec> Proposals(CancellationToken token)
+        public async Task<Ajuna.NetApi.Model.FrameSupport.BoundedVecT8> Proposals(CancellationToken token)
         {
             string parameters = TechnicalCommitteeStorage.ProposalsParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.BoundedVec>(parameters, token);
+            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.BoundedVecT8>(parameters, token);
         }
         
         /// <summary>

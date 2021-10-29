@@ -17,7 +17,7 @@ namespace Ajuna.NetApi.Model.SpRuntime
     
     
     /// <summary>
-    /// >> 124 - Composite[sp_runtime.traits.BlakeTwo256]
+    /// >> 128 - Composite[sp_runtime.traits.BlakeTwo256]
     /// </summary>
     public sealed class BlakeTwo256 : BaseType
     {

@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpArithmetic
     
     
     /// <summary>
-    /// >> 203 - Composite[sp_arithmetic.per_things.Percent]
+    /// >> 207 - Composite[sp_arithmetic.per_things.Percent]
     /// </summary>
     public sealed class Percent : BaseType
     {

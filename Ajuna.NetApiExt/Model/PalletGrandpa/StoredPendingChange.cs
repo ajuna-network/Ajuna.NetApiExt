@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletGrandpa
     
     
     /// <summary>
-    /// >> 395 - Composite[pallet_grandpa.StoredPendingChange]
+    /// >> 404 - Composite[pallet_grandpa.StoredPendingChange]
     /// </summary>
     public sealed class StoredPendingChange : BaseType
     {
@@ -37,7 +37,7 @@ namespace Ajuna.NetApi.Model.PalletGrandpa
         /// <summary>
         /// >> next_authorities
         /// </summary>
-        private Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec _nextAuthorities;
+        private Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT3 _nextAuthorities;
         
         /// <summary>
         /// >> forced
@@ -68,7 +68,7 @@ namespace Ajuna.NetApi.Model.PalletGrandpa
             }
         }
         
-        public Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec NextAuthorities
+        public Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT3 NextAuthorities
         {
             get
             {
@@ -114,7 +114,7 @@ namespace Ajuna.NetApi.Model.PalletGrandpa
             ScheduledAt.Decode(byteArray, ref p);
             Delay = new Ajuna.NetApi.Model.Types.Primitive.U32();
             Delay.Decode(byteArray, ref p);
-            NextAuthorities = new Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec();
+            NextAuthorities = new Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT3();
             NextAuthorities.Decode(byteArray, ref p);
             Forced = new BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32>();
             Forced.Decode(byteArray, ref p);

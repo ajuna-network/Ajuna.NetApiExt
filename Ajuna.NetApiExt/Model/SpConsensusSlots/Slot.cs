@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpConsensusSlots
     
     
     /// <summary>
-    /// >> 126 - Composite[sp_consensus_slots.Slot]
+    /// >> 130 - Composite[sp_consensus_slots.Slot]
     /// </summary>
     public sealed class Slot : BaseType
     {

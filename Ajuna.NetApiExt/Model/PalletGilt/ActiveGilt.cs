@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletGilt
     
     
     /// <summary>
-    /// >> 493 - Composite[pallet_gilt.pallet.ActiveGilt]
+    /// >> 502 - Composite[pallet_gilt.pallet.ActiveGilt]
     /// </summary>
     public sealed class ActiveGilt : BaseType
     {

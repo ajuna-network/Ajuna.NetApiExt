@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
     
     
     /// <summary>
-    /// >> 105 - Composite[frame_system.limits.BlockWeights]
+    /// >> 109 - Composite[frame_system.limits.BlockWeights]
     /// </summary>
     public sealed class BlockWeights : BaseType
     {
@@ -37,7 +37,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
         /// <summary>
         /// >> per_class
         /// </summary>
-        private Ajuna.NetApi.Model.FrameSupport.PerDispatchClass _perClass;
+        private Ajuna.NetApi.Model.FrameSupport.PerDispatchClassT2 _perClass;
         
         public Ajuna.NetApi.Model.Types.Primitive.U64 BaseBlock
         {
@@ -63,7 +63,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
             }
         }
         
-        public Ajuna.NetApi.Model.FrameSupport.PerDispatchClass PerClass
+        public Ajuna.NetApi.Model.FrameSupport.PerDispatchClassT2 PerClass
         {
             get
             {
@@ -96,7 +96,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
             BaseBlock.Decode(byteArray, ref p);
             MaxBlock = new Ajuna.NetApi.Model.Types.Primitive.U64();
             MaxBlock.Decode(byteArray, ref p);
-            PerClass = new Ajuna.NetApi.Model.FrameSupport.PerDispatchClass();
+            PerClass = new Ajuna.NetApi.Model.FrameSupport.PerDispatchClassT2();
             PerClass.Decode(byteArray, ref p);
             TypeSize = p - start;
         }

@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletIdentity
     
     
     /// <summary>
-    /// >> 424 - Composite[pallet_identity.types.Registration]
+    /// >> 433 - Composite[pallet_identity.types.Registration]
     /// </summary>
     public sealed class Registration : BaseType
     {
@@ -28,7 +28,7 @@ namespace Ajuna.NetApi.Model.PalletIdentity
         /// <summary>
         /// >> judgements
         /// </summary>
-        private Ajuna.NetApi.Model.FrameSupport.BoundedVec _judgements;
+        private Ajuna.NetApi.Model.FrameSupport.BoundedVecT10 _judgements;
         
         /// <summary>
         /// >> deposit
@@ -40,7 +40,7 @@ namespace Ajuna.NetApi.Model.PalletIdentity
         /// </summary>
         private Ajuna.NetApi.Model.PalletIdentity.IdentityInfo _info;
         
-        public Ajuna.NetApi.Model.FrameSupport.BoundedVec Judgements
+        public Ajuna.NetApi.Model.FrameSupport.BoundedVecT10 Judgements
         {
             get
             {
@@ -93,7 +93,7 @@ namespace Ajuna.NetApi.Model.PalletIdentity
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Judgements = new Ajuna.NetApi.Model.FrameSupport.BoundedVec();
+            Judgements = new Ajuna.NetApi.Model.FrameSupport.BoundedVecT10();
             Judgements.Decode(byteArray, ref p);
             Deposit = new Ajuna.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);

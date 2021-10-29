@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.SpNposElections
     
     
     /// <summary>
-    /// >> 197 - Composite[sp_npos_elections.Support]
+    /// >> 201 - Composite[sp_npos_elections.Support]
     /// </summary>
     public sealed class Support : BaseType
     {

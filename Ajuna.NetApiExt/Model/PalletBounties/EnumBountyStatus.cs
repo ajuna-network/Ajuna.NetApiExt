@@ -35,7 +35,7 @@ namespace Ajuna.NetApi.Model.PalletBounties
     }
     
     /// <summary>
-    /// >> 476 - Variant[pallet_bounties.BountyStatus]
+    /// >> 485 - Variant[pallet_bounties.BountyStatus]
     /// </summary>
     public sealed class EnumBountyStatus : BaseEnumExt<BountyStatus, BaseVoid, BaseVoid, BaseVoid, Ajuna.NetApi.Model.SpCore.AccountId32, BaseTuple<Ajuna.NetApi.Model.SpCore.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U32>, BaseTuple<Ajuna.NetApi.Model.SpCore.AccountId32, Ajuna.NetApi.Model.SpCore.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U32>>
     {

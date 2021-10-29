@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
     
     
     /// <summary>
-    /// >> 360 - Composite[pallet_staking.slashing.SpanRecord]
+    /// >> 367 - Composite[pallet_staking.slashing.SpanRecord]
     /// </summary>
     public sealed class SpanRecord : BaseType
     {

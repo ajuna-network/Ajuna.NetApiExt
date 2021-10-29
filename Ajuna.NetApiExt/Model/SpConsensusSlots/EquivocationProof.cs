@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.SpConsensusSlots
     
     
     /// <summary>
-    /// >> 122 - Composite[sp_consensus_slots.EquivocationProof]
+    /// >> 126 - Composite[sp_consensus_slots.EquivocationProof]
     /// </summary>
     public sealed class EquivocationProof : BaseType
     {

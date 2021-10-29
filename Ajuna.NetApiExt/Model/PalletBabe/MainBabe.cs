@@ -37,16 +37,16 @@ namespace Ajuna.NetApi.Model.PalletBabe
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "EpochIndex"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U64)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "Authorities"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "Authorities"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT1)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "GenesisSlot"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.SpConsensusSlots.Slot)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "CurrentSlot"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.SpConsensusSlots.Slot)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "Randomness"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Base.Arr32U8)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "PendingEpochConfigChange"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.SpConsensusBabe.EnumNextConfigDescriptor)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "NextRandomness"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Base.Arr32U8)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "NextAuthorities"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "NextAuthorities"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT1)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "SegmentIndex"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "UnderConstruction"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
-                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Ajuna.NetApi.Model.Types.Primitive.U32), typeof(Ajuna.NetApi.Model.FrameSupport.BoundedVec)));
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Ajuna.NetApi.Model.Types.Primitive.U32), typeof(Ajuna.NetApi.Model.FrameSupport.BoundedVecT5)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "Initialized"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(BaseOpt<Ajuna.NetApi.Model.Base.Arr32U8>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "AuthorVrfRandomness"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(BaseOpt<Ajuna.NetApi.Model.Base.Arr32U8>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Babe", "EpochStart"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,Ajuna.NetApi.Model.Types.Primitive.U32>)));
@@ -87,10 +87,10 @@ namespace Ajuna.NetApi.Model.PalletBabe
         /// >> Authorities
         ///  Current epoch authorities.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec> Authorities(CancellationToken token)
+        public async Task<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT1> Authorities(CancellationToken token)
         {
             string parameters = BabeStorage.AuthoritiesParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec>(parameters, token);
+            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT1>(parameters, token);
         }
         
         /// <summary>
@@ -221,10 +221,10 @@ namespace Ajuna.NetApi.Model.PalletBabe
         /// >> NextAuthorities
         ///  Next epoch authorities.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec> NextAuthorities(CancellationToken token)
+        public async Task<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT1> NextAuthorities(CancellationToken token)
         {
             string parameters = BabeStorage.NextAuthoritiesParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec>(parameters, token);
+            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT1>(parameters, token);
         }
         
         /// <summary>
@@ -277,10 +277,10 @@ namespace Ajuna.NetApi.Model.PalletBabe
         /// >> UnderConstruction
         ///  TWOX-NOTE: `SegmentIndex` is an increasing integer, so this is okay.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.FrameSupport.BoundedVec> UnderConstruction(Ajuna.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
+        public async Task<Ajuna.NetApi.Model.FrameSupport.BoundedVecT5> UnderConstruction(Ajuna.NetApi.Model.Types.Primitive.U32 key, CancellationToken token)
         {
             string parameters = BabeStorage.UnderConstructionParams(key);
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.BoundedVec>(parameters, token);
+            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.BoundedVecT5>(parameters, token);
         }
         
         /// <summary>

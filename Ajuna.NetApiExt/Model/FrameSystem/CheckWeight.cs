@@ -17,7 +17,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
     
     
     /// <summary>
-    /// >> 520 - Composite[frame_system.extensions.check_weight.CheckWeight]
+    /// >> 538 - Composite[frame_system.extensions.check_weight.CheckWeight]
     /// </summary>
     public sealed class CheckWeight : BaseType
     {

@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.Base
     
     
     /// <summary>
-    /// >> 179 - Array
+    /// >> 183 - Array
     /// </summary>
     public sealed class Arr11Special19 : BaseType
     {

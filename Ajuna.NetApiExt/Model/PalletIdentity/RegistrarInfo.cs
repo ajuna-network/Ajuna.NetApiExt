@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletIdentity
     
     
     /// <summary>
-    /// >> 432 - Composite[pallet_identity.types.RegistrarInfo]
+    /// >> 441 - Composite[pallet_identity.types.RegistrarInfo]
     /// </summary>
     public sealed class RegistrarInfo : BaseType
     {

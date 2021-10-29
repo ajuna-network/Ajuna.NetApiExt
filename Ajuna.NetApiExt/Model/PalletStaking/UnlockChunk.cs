@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
     
     
     /// <summary>
-    /// >> 347 - Composite[pallet_staking.UnlockChunk]
+    /// >> 354 - Composite[pallet_staking.UnlockChunk]
     /// </summary>
     public sealed class UnlockChunk : BaseType
     {

@@ -92,6 +92,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(BaseTuple<Ajuna.NetApi.Model.SpCore.AccountId32,Ajuna.NetApi.Model.Types.Primitive.U32>), typeof(Ajuna.NetApi.Model.PalletStaking.SpanRecord)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Staking", "EarliestUnappliedSlash"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U32)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Staking", "CurrentPlannedSession"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U32)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Staking", "OffendingValidators"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(BaseVec<BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,Ajuna.NetApi.Model.Types.Primitive.Bool>>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Staking", "StorageVersion"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.PalletStaking.EnumReleases)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Staking", "ChillThreshold"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.SpArithmetic.Percent)));
         }
@@ -914,6 +915,41 @@ namespace Ajuna.NetApi.Model.PalletStaking
         {
             string parameters = StakingStorage.CurrentPlannedSessionParams();
             return await _client.GetStorageAsync<Ajuna.NetApi.Model.Types.Primitive.U32>(parameters, token);
+        }
+        
+        /// <summary>
+        /// >> OffendingValidatorsParams
+        ///  Indices of validators that have offended in the active era and whether they are currently
+        ///  disabled.
+        /// 
+        ///  This value should be a superset of disabled validators since not all offences lead to the
+        ///  validator being disabled (if there was no slash). This is needed to track the percentage of
+        ///  validators that have offended in the current era, ensuring a new era is forced if
+        ///  `OffendingValidatorsThreshold` is reached. The vec is always kept sorted so that we can find
+        ///  whether a given validator has previously offended using binary search. It gets cleared when
+        ///  the era ends.
+        /// </summary>
+        public static string OffendingValidatorsParams()
+        {
+            return RequestGenerator.GetStorage("Staking", "OffendingValidators", Ajuna.NetApi.Model.Meta.Storage.Type.Plain);
+        }
+        
+        /// <summary>
+        /// >> OffendingValidators
+        ///  Indices of validators that have offended in the active era and whether they are currently
+        ///  disabled.
+        /// 
+        ///  This value should be a superset of disabled validators since not all offences lead to the
+        ///  validator being disabled (if there was no slash). This is needed to track the percentage of
+        ///  validators that have offended in the current era, ensuring a new era is forced if
+        ///  `OffendingValidatorsThreshold` is reached. The vec is always kept sorted so that we can find
+        ///  whether a given validator has previously offended using binary search. It gets cleared when
+        ///  the era ends.
+        /// </summary>
+        public async Task<BaseVec<BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,Ajuna.NetApi.Model.Types.Primitive.Bool>>> OffendingValidators(CancellationToken token)
+        {
+            string parameters = StakingStorage.OffendingValidatorsParams();
+            return await _client.GetStorageAsync<BaseVec<BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,Ajuna.NetApi.Model.Types.Primitive.Bool>>>(parameters, token);
         }
         
         /// <summary>

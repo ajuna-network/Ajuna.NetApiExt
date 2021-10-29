@@ -25,7 +25,7 @@ namespace Ajuna.NetApi.Model.PalletScheduler
     }
     
     /// <summary>
-    /// >> 460 - Variant[pallet_scheduler.Releases]
+    /// >> 469 - Variant[pallet_scheduler.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

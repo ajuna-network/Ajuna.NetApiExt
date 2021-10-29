@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpTransactionStorageProof
     
     
     /// <summary>
-    /// >> 304 - Composite[sp_transaction_storage_proof.TransactionStorageProof]
+    /// >> 308 - Composite[sp_transaction_storage_proof.TransactionStorageProof]
     /// </summary>
     public sealed class TransactionStorageProof : BaseType
     {

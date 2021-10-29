@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpCore
     
     
     /// <summary>
-    /// >> 238 - Composite[sp_core.offchain.OpaqueMultiaddr]
+    /// >> 242 - Composite[sp_core.offchain.OpaqueMultiaddr]
     /// </summary>
     public sealed class OpaqueMultiaddr : BaseType
     {

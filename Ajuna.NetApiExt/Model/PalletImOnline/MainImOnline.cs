@@ -36,7 +36,7 @@ namespace Ajuna.NetApi.Model.PalletImOnline
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ImOnline", "HeartbeatAfter"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.Types.Primitive.U32)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ImOnline", "Keys"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("ImOnline", "Keys"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT4)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("ImOnline", "ReceivedHeartbeats"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat,
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,Ajuna.NetApi.Model.Types.Primitive.U32>), typeof(Ajuna.NetApi.Model.FrameSupport.WrapperOpaque)));
@@ -97,15 +97,15 @@ namespace Ajuna.NetApi.Model.PalletImOnline
         /// >> Keys
         ///  The current set of keys that may issue a heartbeat.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec> Keys(CancellationToken token)
+        public async Task<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT4> Keys(CancellationToken token)
         {
             string parameters = ImOnlineStorage.KeysParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec>(parameters, token);
+            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT4>(parameters, token);
         }
         
         /// <summary>
         /// >> ReceivedHeartbeatsParams
-        ///  For each session index, we keep a mapping of 'SessionIndex` and `AuthIndex` to
+        ///  For each session index, we keep a mapping of `SessionIndex` and `AuthIndex` to
         ///  `WrapperOpaque<BoundedOpaqueNetworkState>`.
         /// </summary>
         public static string ReceivedHeartbeatsParams(BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,Ajuna.NetApi.Model.Types.Primitive.U32> key)
@@ -118,7 +118,7 @@ namespace Ajuna.NetApi.Model.PalletImOnline
         
         /// <summary>
         /// >> ReceivedHeartbeats
-        ///  For each session index, we keep a mapping of 'SessionIndex` and `AuthIndex` to
+        ///  For each session index, we keep a mapping of `SessionIndex` and `AuthIndex` to
         ///  `WrapperOpaque<BoundedOpaqueNetworkState>`.
         /// </summary>
         public async Task<Ajuna.NetApi.Model.FrameSupport.WrapperOpaque> ReceivedHeartbeats(BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,Ajuna.NetApi.Model.Types.Primitive.U32> key, CancellationToken token)

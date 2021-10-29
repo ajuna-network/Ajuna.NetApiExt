@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletTransactionPayment
     
     
     /// <summary>
-    /// >> 521 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
+    /// >> 539 - Composite[pallet_transaction_payment.ChargeTransactionPayment]
     /// </summary>
     public sealed class ChargeTransactionPayment : BaseType
     {

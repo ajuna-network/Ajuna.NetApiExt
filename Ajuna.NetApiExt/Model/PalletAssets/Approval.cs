@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletAssets
     
     
     /// <summary>
-    /// >> 483 - Composite[pallet_assets.types.Approval]
+    /// >> 492 - Composite[pallet_assets.types.Approval]
     /// </summary>
     public sealed class Approval : BaseType
     {

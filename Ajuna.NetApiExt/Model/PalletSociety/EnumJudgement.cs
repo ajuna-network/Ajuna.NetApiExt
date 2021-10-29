@@ -27,7 +27,7 @@ namespace Ajuna.NetApi.Model.PalletSociety
     }
     
     /// <summary>
-    /// >> 282 - Variant[pallet_society.Judgement]
+    /// >> 286 - Variant[pallet_society.Judgement]
     /// </summary>
     public sealed class EnumJudgement : BaseEnum<Judgement>
     {

@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpArithmetic
     
     
     /// <summary>
-    /// >> 400 - Composite[sp_arithmetic.per_things.Permill]
+    /// >> 409 - Composite[sp_arithmetic.per_things.Permill]
     /// </summary>
     public sealed class Permill : BaseType
     {

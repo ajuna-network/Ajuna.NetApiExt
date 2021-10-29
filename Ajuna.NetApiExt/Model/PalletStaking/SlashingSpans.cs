@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
     
     
     /// <summary>
-    /// >> 359 - Composite[pallet_staking.slashing.SlashingSpans]
+    /// >> 366 - Composite[pallet_staking.slashing.SlashingSpans]
     /// </summary>
     public sealed class SlashingSpans : BaseType
     {

@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.FrameSupport
     
     
     /// <summary>
-    /// >> 332 - Composite[frame_support.weights.WeightToFeeCoefficient]
+    /// >> 339 - Composite[frame_support.weights.WeightToFeeCoefficient]
     /// </summary>
     public sealed class WeightToFeeCoefficient : BaseType
     {

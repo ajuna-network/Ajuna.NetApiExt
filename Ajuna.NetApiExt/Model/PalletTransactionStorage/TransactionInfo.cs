@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletTransactionStorage
     
     
     /// <summary>
-    /// >> 504 - Composite[pallet_transaction_storage.TransactionInfo]
+    /// >> 513 - Composite[pallet_transaction_storage.TransactionInfo]
     /// </summary>
     public sealed class TransactionInfo : BaseType
     {

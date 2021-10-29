@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletImOnline
     
     
     /// <summary>
-    /// >> 239 - Composite[pallet_im_online.sr25519.app_sr25519.Signature]
+    /// >> 243 - Composite[pallet_im_online.sr25519.app_sr25519.Signature]
     /// </summary>
     public sealed class Signature : BaseType
     {

@@ -28,7 +28,7 @@ namespace Ajuna.NetApi.Model.PalletAuthorship
     }
     
     /// <summary>
-    /// >> 316 - Variant[pallet_authorship.UncleEntryItem]
+    /// >> 323 - Variant[pallet_authorship.UncleEntryItem]
     /// </summary>
     public sealed class EnumUncleEntryItem : BaseEnumExt<UncleEntryItem, Ajuna.NetApi.Model.Types.Primitive.U32, BaseTuple<Ajuna.NetApi.Model.PrimitiveTypes.H256, BaseOpt<Ajuna.NetApi.Model.SpCore.AccountId32>>>
     {

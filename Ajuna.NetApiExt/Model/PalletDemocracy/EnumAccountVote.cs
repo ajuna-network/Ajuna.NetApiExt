@@ -27,7 +27,7 @@ namespace Ajuna.NetApi.Model.PalletDemocracy
     }
     
     /// <summary>
-    /// >> 209 - Variant[pallet_democracy.vote.AccountVote]
+    /// >> 213 - Variant[pallet_democracy.vote.AccountVote]
     /// </summary>
     public sealed class EnumAccountVote : BaseEnumExt<AccountVote, BaseTuple<Ajuna.NetApi.Model.PalletDemocracy.Vote, Ajuna.NetApi.Model.Types.Primitive.U128>, BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U128, Ajuna.NetApi.Model.Types.Primitive.U128>>
     {

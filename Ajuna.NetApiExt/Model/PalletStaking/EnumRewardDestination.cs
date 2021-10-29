@@ -32,7 +32,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
     }
     
     /// <summary>
-    /// >> 199 - Variant[pallet_staking.RewardDestination]
+    /// >> 203 - Variant[pallet_staking.RewardDestination]
     /// </summary>
     public sealed class EnumRewardDestination : BaseEnumExt<RewardDestination, BaseVoid, BaseVoid, BaseVoid, Ajuna.NetApi.Model.SpCore.AccountId32, BaseVoid>
     {

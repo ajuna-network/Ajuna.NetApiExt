@@ -99,7 +99,7 @@ namespace Ajuna.NetApi.Model.PalletIdentity
     }
     
     /// <summary>
-    /// >> 245 - Variant[pallet_identity.types.Data]
+    /// >> 249 - Variant[pallet_identity.types.Data]
     /// </summary>
     public sealed class EnumData : BaseEnumExt<Data, BaseVoid>
     {

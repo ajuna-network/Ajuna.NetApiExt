@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletMultisig
     
     
     /// <summary>
-    /// >> 472 - Composite[pallet_multisig.Multisig]
+    /// >> 481 - Composite[pallet_multisig.Multisig]
     /// </summary>
     public sealed class Multisig : BaseType
     {

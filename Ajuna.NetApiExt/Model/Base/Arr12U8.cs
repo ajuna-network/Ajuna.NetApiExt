@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.Base
     
     
     /// <summary>
-    /// >> 256 - Array
+    /// >> 260 - Array
     /// </summary>
     public sealed class Arr12U8 : BaseType
     {

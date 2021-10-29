@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.SpConsensusBabe
     
     
     /// <summary>
-    /// >> 313 - Composite[sp_consensus_babe.BabeEpochConfiguration]
+    /// >> 320 - Composite[sp_consensus_babe.BabeEpochConfiguration]
     /// </summary>
     public sealed class BabeEpochConfiguration : BaseType
     {

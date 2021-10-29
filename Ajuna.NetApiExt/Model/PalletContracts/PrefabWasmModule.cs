@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletContracts
     
     
     /// <summary>
-    /// >> 403 - Composite[pallet_contracts.wasm.PrefabWasmModule]
+    /// >> 412 - Composite[pallet_contracts.wasm.PrefabWasmModule]
     /// </summary>
     public sealed class PrefabWasmModule : BaseType
     {

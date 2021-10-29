@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletElectionProviderMultiPhase
     
     
     /// <summary>
-    /// >> 336 - Composite[pallet_election_provider_multi_phase.RoundSnapshot]
+    /// >> 343 - Composite[pallet_election_provider_multi_phase.RoundSnapshot]
     /// </summary>
     public sealed class RoundSnapshot : BaseType
     {

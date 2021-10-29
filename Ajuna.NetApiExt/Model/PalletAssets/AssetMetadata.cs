@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletAssets
     
     
     /// <summary>
-    /// >> 484 - Composite[pallet_assets.types.AssetMetadata]
+    /// >> 493 - Composite[pallet_assets.types.AssetMetadata]
     /// </summary>
     public sealed class AssetMetadata : BaseType
     {
@@ -32,12 +32,12 @@ namespace Ajuna.NetApi.Model.PalletAssets
         /// <summary>
         /// >> name
         /// </summary>
-        private Ajuna.NetApi.Model.FrameSupport.BoundedVec _name;
+        private Ajuna.NetApi.Model.FrameSupport.BoundedVecT1 _name;
         
         /// <summary>
         /// >> symbol
         /// </summary>
-        private Ajuna.NetApi.Model.FrameSupport.BoundedVec _symbol;
+        private Ajuna.NetApi.Model.FrameSupport.BoundedVecT1 _symbol;
         
         /// <summary>
         /// >> decimals
@@ -61,7 +61,7 @@ namespace Ajuna.NetApi.Model.PalletAssets
             }
         }
         
-        public Ajuna.NetApi.Model.FrameSupport.BoundedVec Name
+        public Ajuna.NetApi.Model.FrameSupport.BoundedVecT1 Name
         {
             get
             {
@@ -73,7 +73,7 @@ namespace Ajuna.NetApi.Model.PalletAssets
             }
         }
         
-        public Ajuna.NetApi.Model.FrameSupport.BoundedVec Symbol
+        public Ajuna.NetApi.Model.FrameSupport.BoundedVecT1 Symbol
         {
             get
             {
@@ -130,9 +130,9 @@ namespace Ajuna.NetApi.Model.PalletAssets
             var start = p;
             Deposit = new Ajuna.NetApi.Model.Types.Primitive.U128();
             Deposit.Decode(byteArray, ref p);
-            Name = new Ajuna.NetApi.Model.FrameSupport.BoundedVec();
+            Name = new Ajuna.NetApi.Model.FrameSupport.BoundedVecT1();
             Name.Decode(byteArray, ref p);
-            Symbol = new Ajuna.NetApi.Model.FrameSupport.BoundedVec();
+            Symbol = new Ajuna.NetApi.Model.FrameSupport.BoundedVecT1();
             Symbol.Decode(byteArray, ref p);
             Decimals = new Ajuna.NetApi.Model.Types.Primitive.U8();
             Decimals.Decode(byteArray, ref p);

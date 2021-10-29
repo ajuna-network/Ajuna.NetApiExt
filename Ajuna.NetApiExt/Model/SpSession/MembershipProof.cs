@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpSession
     
     
     /// <summary>
-    /// >> 127 - Composite[sp_session.MembershipProof]
+    /// >> 131 - Composite[sp_session.MembershipProof]
     /// </summary>
     public sealed class MembershipProof : BaseType
     {

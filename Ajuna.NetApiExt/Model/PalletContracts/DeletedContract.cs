@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletContracts
     
     
     /// <summary>
-    /// >> 407 - Composite[pallet_contracts.storage.DeletedContract]
+    /// >> 416 - Composite[pallet_contracts.storage.DeletedContract]
     /// </summary>
     public sealed class DeletedContract : BaseType
     {

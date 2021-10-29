@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletContracts
     
     
     /// <summary>
-    /// >> 408 - Composite[pallet_contracts.schedule.Schedule]
+    /// >> 417 - Composite[pallet_contracts.schedule.Schedule]
     /// </summary>
     public sealed class Schedule : BaseType
     {

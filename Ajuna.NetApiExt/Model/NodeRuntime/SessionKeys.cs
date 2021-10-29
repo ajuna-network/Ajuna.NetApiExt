@@ -21,7 +21,7 @@ namespace Ajuna.NetApi.Model.NodeRuntime
     
     
     /// <summary>
-    /// >> 206 - Composite[node_runtime.SessionKeys]
+    /// >> 210 - Composite[node_runtime.SessionKeys]
     /// </summary>
     public sealed class SessionKeys : BaseType
     {

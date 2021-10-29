@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletVesting
     
     
     /// <summary>
-    /// >> 285 - Composite[pallet_vesting.vesting_info.VestingInfo]
+    /// >> 289 - Composite[pallet_vesting.vesting_info.VestingInfo]
     /// </summary>
     public sealed class VestingInfo : BaseType
     {

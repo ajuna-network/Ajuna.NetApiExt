@@ -37,7 +37,7 @@ namespace Ajuna.NetApi.Model.PalletIdentity
     }
     
     /// <summary>
-    /// >> 279 - Variant[pallet_identity.types.IdentityField]
+    /// >> 283 - Variant[pallet_identity.types.IdentityField]
     /// </summary>
     public sealed class EnumIdentityField : BaseEnum<IdentityField>
     {

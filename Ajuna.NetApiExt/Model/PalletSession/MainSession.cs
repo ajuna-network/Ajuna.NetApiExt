@@ -128,7 +128,9 @@ namespace Ajuna.NetApi.Model.PalletSession
         /// >> DisabledValidatorsParams
         ///  Indices of disabled validators.
         /// 
-        ///  The set is cleared when `on_session_ending` returns a new set of identities.
+        ///  The vec is always kept sorted so that we can find whether a given validator is
+        ///  disabled using binary search. It gets cleared when `on_session_ending` returns
+        ///  a new set of identities.
         /// </summary>
         public static string DisabledValidatorsParams()
         {
@@ -139,7 +141,9 @@ namespace Ajuna.NetApi.Model.PalletSession
         /// >> DisabledValidators
         ///  Indices of disabled validators.
         /// 
-        ///  The set is cleared when `on_session_ending` returns a new set of identities.
+        ///  The vec is always kept sorted so that we can find whether a given validator is
+        ///  disabled using binary search. It gets cleared when `on_session_ending` returns
+        ///  a new set of identities.
         /// </summary>
         public async Task<BaseVec<Ajuna.NetApi.Model.Types.Primitive.U32>> DisabledValidators(CancellationToken token)
         {

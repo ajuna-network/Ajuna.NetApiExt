@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletRecovery
     
     
     /// <summary>
-    /// >> 445 - Composite[pallet_recovery.RecoveryConfig]
+    /// >> 454 - Composite[pallet_recovery.RecoveryConfig]
     /// </summary>
     public sealed class RecoveryConfig : BaseType
     {

@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
     
     
     /// <summary>
-    /// >> 107 - Composite[frame_system.limits.WeightsPerClass]
+    /// >> 111 - Composite[frame_system.limits.WeightsPerClass]
     /// </summary>
     public sealed class WeightsPerClass : BaseType
     {

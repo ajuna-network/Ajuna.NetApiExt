@@ -21,7 +21,7 @@ namespace Ajuna.NetApi.Model.PalletElectionProviderMultiPhase
     
     
     /// <summary>
-    /// >> 335 - Composite[pallet_election_provider_multi_phase.ReadySolution]
+    /// >> 342 - Composite[pallet_election_provider_multi_phase.ReadySolution]
     /// </summary>
     public sealed class ReadySolution : BaseType
     {

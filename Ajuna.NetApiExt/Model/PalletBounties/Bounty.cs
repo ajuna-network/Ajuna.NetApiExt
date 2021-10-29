@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletBounties
     
     
     /// <summary>
-    /// >> 475 - Composite[pallet_bounties.Bounty]
+    /// >> 484 - Composite[pallet_bounties.Bounty]
     /// </summary>
     public sealed class Bounty : BaseType
     {

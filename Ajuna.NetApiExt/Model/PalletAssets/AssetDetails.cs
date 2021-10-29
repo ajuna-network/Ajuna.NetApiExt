@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletAssets
     
     
     /// <summary>
-    /// >> 480 - Composite[pallet_assets.types.AssetDetails]
+    /// >> 489 - Composite[pallet_assets.types.AssetDetails]
     /// </summary>
     public sealed class AssetDetails : BaseType
     {

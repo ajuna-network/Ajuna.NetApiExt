@@ -36,7 +36,7 @@ namespace Ajuna.NetApi.Model.PalletCouncil
         public CouncilStorage(SubstrateClientExt client)
         {
             this._client = client;
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "Proposals"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.BoundedVec)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "Proposals"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.BoundedVecT7)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "ProposalOf"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.Identity}, typeof(Ajuna.NetApi.Model.PrimitiveTypes.H256), typeof(Ajuna.NetApi.Model.NodeRuntime.EnumNodeCall)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Council", "Voting"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
@@ -59,10 +59,10 @@ namespace Ajuna.NetApi.Model.PalletCouncil
         /// >> Proposals
         ///  The hashes of the active proposals.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.FrameSupport.BoundedVec> Proposals(CancellationToken token)
+        public async Task<Ajuna.NetApi.Model.FrameSupport.BoundedVecT7> Proposals(CancellationToken token)
         {
             string parameters = CouncilStorage.ProposalsParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.BoundedVec>(parameters, token);
+            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.BoundedVecT7>(parameters, token);
         }
         
         /// <summary>

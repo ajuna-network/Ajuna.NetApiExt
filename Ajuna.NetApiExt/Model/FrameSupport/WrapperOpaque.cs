@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.FrameSupport
     
     
     /// <summary>
-    /// >> 416 - Composite[frame_support.traits.misc.WrapperOpaque]
+    /// >> 425 - Composite[frame_support.traits.misc.WrapperOpaque]
     /// </summary>
     public sealed class WrapperOpaque : BaseType
     {

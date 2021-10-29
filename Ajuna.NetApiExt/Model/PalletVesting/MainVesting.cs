@@ -36,7 +36,7 @@ namespace Ajuna.NetApi.Model.PalletVesting
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Vesting", "Vesting"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
-                            Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(Ajuna.NetApi.Model.FrameSupport.BoundedVec)));
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(Ajuna.NetApi.Model.FrameSupport.BoundedVecT13)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Vesting", "StorageVersion"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.PalletVesting.EnumReleases)));
         }
         
@@ -55,10 +55,10 @@ namespace Ajuna.NetApi.Model.PalletVesting
         /// >> Vesting
         ///  Information regarding the vesting of a given account.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.FrameSupport.BoundedVec> Vesting(Ajuna.NetApi.Model.SpCore.AccountId32 key, CancellationToken token)
+        public async Task<Ajuna.NetApi.Model.FrameSupport.BoundedVecT13> Vesting(Ajuna.NetApi.Model.SpCore.AccountId32 key, CancellationToken token)
         {
             string parameters = VestingStorage.VestingParams(key);
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.BoundedVec>(parameters, token);
+            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.BoundedVecT13>(parameters, token);
         }
         
         /// <summary>

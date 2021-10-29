@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletSociety
     
     
     /// <summary>
-    /// >> 436 - Composite[pallet_society.Bid]
+    /// >> 445 - Composite[pallet_society.Bid]
     /// </summary>
     public sealed class Bid : BaseType
     {

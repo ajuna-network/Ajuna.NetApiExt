@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
     
     
     /// <summary>
-    /// >> 109 - Composite[frame_system.limits.BlockLength]
+    /// >> 113 - Composite[frame_system.limits.BlockLength]
     /// </summary>
     public sealed class BlockLength : BaseType
     {
@@ -26,9 +26,9 @@ namespace Ajuna.NetApi.Model.FrameSystem
         /// <summary>
         /// >> max
         /// </summary>
-        private Ajuna.NetApi.Model.FrameSupport.PerDispatchClass _max;
+        private Ajuna.NetApi.Model.FrameSupport.PerDispatchClassT3 _max;
         
-        public Ajuna.NetApi.Model.FrameSupport.PerDispatchClass Max
+        public Ajuna.NetApi.Model.FrameSupport.PerDispatchClassT3 Max
         {
             get
             {
@@ -55,7 +55,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Max = new Ajuna.NetApi.Model.FrameSupport.PerDispatchClass();
+            Max = new Ajuna.NetApi.Model.FrameSupport.PerDispatchClassT3();
             Max.Decode(byteArray, ref p);
             TypeSize = p - start;
         }

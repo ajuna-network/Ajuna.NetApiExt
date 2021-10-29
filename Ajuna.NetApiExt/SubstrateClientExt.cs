@@ -230,6 +230,21 @@ namespace Ajuna.NetApi
         /// </summary>
         public Ajuna.NetApi.Model.PalletBagsList.BagsListStorage BagsListStorage;
         
+        /// <summary>
+        /// BoilerPlateStorage storage calls.
+        /// </summary>
+        public Ajuna.NetApi.Model.PalletBoilerPlate.BoilerPlateStorage BoilerPlateStorage;
+        
+        /// <summary>
+        /// ConnectFourMamaStorage storage calls.
+        /// </summary>
+        public Ajuna.NetApi.Model.PalletConnectFourMama.ConnectFourMamaStorage ConnectFourMamaStorage;
+        
+        /// <summary>
+        /// ConnectFourStorage storage calls.
+        /// </summary>
+        public Ajuna.NetApi.Model.PalletConnectFour.ConnectFourStorage ConnectFourStorage;
+        
         public SubstrateClientExt(System.Uri uri) : 
                 base(uri)
         {
@@ -275,6 +290,9 @@ namespace Ajuna.NetApi
             this.UniquesStorage = new Ajuna.NetApi.Model.PalletUniques.UniquesStorage(this);
             this.TransactionStorageStorage = new Ajuna.NetApi.Model.PalletTransactionStorage.TransactionStorageStorage(this);
             this.BagsListStorage = new Ajuna.NetApi.Model.PalletBagsList.BagsListStorage(this);
+            this.BoilerPlateStorage = new Ajuna.NetApi.Model.PalletBoilerPlate.BoilerPlateStorage(this);
+            this.ConnectFourMamaStorage = new Ajuna.NetApi.Model.PalletConnectFourMama.ConnectFourMamaStorage(this);
+            this.ConnectFourStorage = new Ajuna.NetApi.Model.PalletConnectFour.ConnectFourStorage(this);
         }
     }
 }

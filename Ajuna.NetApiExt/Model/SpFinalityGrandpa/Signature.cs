@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpFinalityGrandpa
     
     
     /// <summary>
-    /// >> 223 - Composite[sp_finality_grandpa.app.Signature]
+    /// >> 227 - Composite[sp_finality_grandpa.app.Signature]
     /// </summary>
     public sealed class Signature : BaseType
     {

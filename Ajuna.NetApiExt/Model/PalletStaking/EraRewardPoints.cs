@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
     
     
     /// <summary>
-    /// >> 351 - Composite[pallet_staking.EraRewardPoints]
+    /// >> 358 - Composite[pallet_staking.EraRewardPoints]
     /// </summary>
     public sealed class EraRewardPoints : BaseType
     {
@@ -32,7 +32,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
         /// <summary>
         /// >> individual
         /// </summary>
-        private Ajuna.NetApi.Model.Base.BTreeMap _individual;
+        private Ajuna.NetApi.Model.Base.BTreeMapT2 _individual;
         
         public Ajuna.NetApi.Model.Types.Primitive.U32 Total
         {
@@ -46,7 +46,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
             }
         }
         
-        public Ajuna.NetApi.Model.Base.BTreeMap Individual
+        public Ajuna.NetApi.Model.Base.BTreeMapT2 Individual
         {
             get
             {
@@ -76,7 +76,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
             var start = p;
             Total = new Ajuna.NetApi.Model.Types.Primitive.U32();
             Total.Decode(byteArray, ref p);
-            Individual = new Ajuna.NetApi.Model.Base.BTreeMap();
+            Individual = new Ajuna.NetApi.Model.Base.BTreeMapT2();
             Individual.Decode(byteArray, ref p);
             TypeSize = p - start;
         }

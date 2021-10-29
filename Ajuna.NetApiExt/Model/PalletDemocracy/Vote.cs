@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletDemocracy
     
     
     /// <summary>
-    /// >> 210 - Composite[pallet_democracy.vote.Vote]
+    /// >> 214 - Composite[pallet_democracy.vote.Vote]
     /// </summary>
     public sealed class Vote : BaseType
     {

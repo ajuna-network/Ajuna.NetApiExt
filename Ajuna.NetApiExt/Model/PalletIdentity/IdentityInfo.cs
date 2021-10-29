@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletIdentity
     
     
     /// <summary>
-    /// >> 242 - Composite[pallet_identity.types.IdentityInfo]
+    /// >> 246 - Composite[pallet_identity.types.IdentityInfo]
     /// </summary>
     public sealed class IdentityInfo : BaseType
     {
@@ -28,7 +28,7 @@ namespace Ajuna.NetApi.Model.PalletIdentity
         /// <summary>
         /// >> additional
         /// </summary>
-        private Ajuna.NetApi.Model.FrameSupport.BoundedVec _additional;
+        private Ajuna.NetApi.Model.FrameSupport.BoundedVecT4 _additional;
         
         /// <summary>
         /// >> display
@@ -70,7 +70,7 @@ namespace Ajuna.NetApi.Model.PalletIdentity
         /// </summary>
         private Ajuna.NetApi.Model.PalletIdentity.EnumData _twitter;
         
-        public Ajuna.NetApi.Model.FrameSupport.BoundedVec Additional
+        public Ajuna.NetApi.Model.FrameSupport.BoundedVecT4 Additional
         {
             get
             {
@@ -201,7 +201,7 @@ namespace Ajuna.NetApi.Model.PalletIdentity
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            Additional = new Ajuna.NetApi.Model.FrameSupport.BoundedVec();
+            Additional = new Ajuna.NetApi.Model.FrameSupport.BoundedVecT4();
             Additional.Decode(byteArray, ref p);
             Display = new Ajuna.NetApi.Model.PalletIdentity.EnumData();
             Display.Decode(byteArray, ref p);

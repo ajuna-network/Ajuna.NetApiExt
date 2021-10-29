@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.FrameSupport
     
     
     /// <summary>
-    /// >> 111 - Composite[frame_support.weights.RuntimeDbWeight]
+    /// >> 115 - Composite[frame_support.weights.RuntimeDbWeight]
     /// </summary>
     public sealed class RuntimeDbWeight : BaseType
     {

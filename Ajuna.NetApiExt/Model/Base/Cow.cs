@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.Base
     
     
     /// <summary>
-    /// >> 113 - Composite[Cow]
+    /// >> 117 - Composite[Cow]
     /// </summary>
     public sealed class Cow : BaseType
     {

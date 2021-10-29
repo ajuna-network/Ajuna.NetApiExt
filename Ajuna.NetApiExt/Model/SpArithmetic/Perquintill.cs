@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpArithmetic
     
     
     /// <summary>
-    /// >> 299 - Composite[sp_arithmetic.per_things.Perquintill]
+    /// >> 303 - Composite[sp_arithmetic.per_things.Perquintill]
     /// </summary>
     public sealed class Perquintill : BaseType
     {

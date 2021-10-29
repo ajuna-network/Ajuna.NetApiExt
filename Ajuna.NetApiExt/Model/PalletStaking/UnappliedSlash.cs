@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
     
     
     /// <summary>
-    /// >> 357 - Composite[pallet_staking.UnappliedSlash]
+    /// >> 364 - Composite[pallet_staking.UnappliedSlash]
     /// </summary>
     public sealed class UnappliedSlash : BaseType
     {

@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletIdentity
     
     
     /// <summary>
-    /// >> 278 - Composite[pallet_identity.types.BitFlags]
+    /// >> 282 - Composite[pallet_identity.types.BitFlags]
     /// </summary>
     public sealed class BitFlags : BaseType
     {

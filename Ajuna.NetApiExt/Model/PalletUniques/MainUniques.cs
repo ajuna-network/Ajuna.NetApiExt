@@ -52,7 +52,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Uniques", "Attribute"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
-                            Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32>,Ajuna.NetApi.Model.FrameSupport.BoundedVec>), typeof(BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVec,Ajuna.NetApi.Model.Types.Primitive.U128>)));
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32>,Ajuna.NetApi.Model.FrameSupport.BoundedVecT2>), typeof(BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVecT3,Ajuna.NetApi.Model.Types.Primitive.U128>)));
         }
         
         /// <summary>
@@ -170,7 +170,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
         /// >> AttributeParams
         ///  Metadata of an asset class.
         /// </summary>
-        public static string AttributeParams(BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32>,Ajuna.NetApi.Model.FrameSupport.BoundedVec> key)
+        public static string AttributeParams(BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32>,Ajuna.NetApi.Model.FrameSupport.BoundedVecT2> key)
         {
             return RequestGenerator.GetStorage("Uniques", "Attribute", Ajuna.NetApi.Model.Meta.Storage.Type.Map, new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                         Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat,
@@ -183,10 +183,10 @@ namespace Ajuna.NetApi.Model.PalletUniques
         /// >> Attribute
         ///  Metadata of an asset class.
         /// </summary>
-        public async Task<BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVec,Ajuna.NetApi.Model.Types.Primitive.U128>> Attribute(BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32>,Ajuna.NetApi.Model.FrameSupport.BoundedVec> key, CancellationToken token)
+        public async Task<BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVecT3,Ajuna.NetApi.Model.Types.Primitive.U128>> Attribute(BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32,BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32>,Ajuna.NetApi.Model.FrameSupport.BoundedVecT2> key, CancellationToken token)
         {
             string parameters = UniquesStorage.AttributeParams(key);
-            return await _client.GetStorageAsync<BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVec,Ajuna.NetApi.Model.Types.Primitive.U128>>(parameters, token);
+            return await _client.GetStorageAsync<BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVecT3,Ajuna.NetApi.Model.Types.Primitive.U128>>(parameters, token);
         }
     }
     
@@ -400,7 +400,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
         /// >> set_attribute
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetAttribute(BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> @class, BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32> maybe_instance, Ajuna.NetApi.Model.FrameSupport.BoundedVec key, Ajuna.NetApi.Model.FrameSupport.BoundedVec value)
+        public static Method SetAttribute(BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> @class, BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32> maybe_instance, Ajuna.NetApi.Model.FrameSupport.BoundedVecT2 key, Ajuna.NetApi.Model.FrameSupport.BoundedVecT3 value)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@class.Encode());
@@ -414,7 +414,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
         /// >> clear_attribute
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method ClearAttribute(BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> @class, BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32> maybe_instance, Ajuna.NetApi.Model.FrameSupport.BoundedVec key)
+        public static Method ClearAttribute(BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> @class, BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32> maybe_instance, Ajuna.NetApi.Model.FrameSupport.BoundedVecT2 key)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@class.Encode());
@@ -427,7 +427,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
         /// >> set_metadata
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetMetadata(BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> @class, BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> instance, Ajuna.NetApi.Model.FrameSupport.BoundedVec data, Ajuna.NetApi.Model.Types.Primitive.Bool is_frozen)
+        public static Method SetMetadata(BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> @class, BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> instance, Ajuna.NetApi.Model.FrameSupport.BoundedVecT1 data, Ajuna.NetApi.Model.Types.Primitive.Bool is_frozen)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@class.Encode());
@@ -453,7 +453,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
         /// >> set_class_metadata
         /// Contains one variant per dispatchable that can be called by an extrinsic.
         /// </summary>
-        public static Method SetClassMetadata(BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> @class, Ajuna.NetApi.Model.FrameSupport.BoundedVec data, Ajuna.NetApi.Model.Types.Primitive.Bool is_frozen)
+        public static Method SetClassMetadata(BaseCom<Ajuna.NetApi.Model.Types.Primitive.U32> @class, Ajuna.NetApi.Model.FrameSupport.BoundedVecT1 data, Ajuna.NetApi.Model.Types.Primitive.Bool is_frozen)
         {
             System.Collections.Generic.List<byte> byteArray = new List<byte>();
             byteArray.AddRange(@class.Encode());
@@ -603,7 +603,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
     /// >> ClassMetadataSet
     /// New metadata has been set for an asset class. \[ class, data, is_frozen \]
     /// </summary>
-    public sealed class EventClassMetadataSet : BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.FrameSupport.BoundedVec, Ajuna.NetApi.Model.Types.Primitive.Bool>
+    public sealed class EventClassMetadataSet : BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.FrameSupport.BoundedVecT1, Ajuna.NetApi.Model.Types.Primitive.Bool>
     {
     }
     
@@ -620,7 +620,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
     /// New metadata has been set for an asset instance.
     /// \[ class, instance, data, is_frozen \]
     /// </summary>
-    public sealed class EventMetadataSet : BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.FrameSupport.BoundedVec, Ajuna.NetApi.Model.Types.Primitive.Bool>
+    public sealed class EventMetadataSet : BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.Types.Primitive.U32, Ajuna.NetApi.Model.FrameSupport.BoundedVecT1, Ajuna.NetApi.Model.Types.Primitive.Bool>
     {
     }
     
@@ -645,7 +645,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
     /// New attribute metadata has been set for an asset class or instance.
     /// \[ class, maybe_instance, key, value \]
     /// </summary>
-    public sealed class EventAttributeSet : BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32>, Ajuna.NetApi.Model.FrameSupport.BoundedVec, Ajuna.NetApi.Model.FrameSupport.BoundedVec>
+    public sealed class EventAttributeSet : BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32>, Ajuna.NetApi.Model.FrameSupport.BoundedVecT2, Ajuna.NetApi.Model.FrameSupport.BoundedVecT3>
     {
     }
     
@@ -654,7 +654,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
     /// Attribute metadata has been cleared for an asset class or instance.
     /// \[ class, maybe_instance, key, maybe_value \]
     /// </summary>
-    public sealed class EventAttributeCleared : BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32>, Ajuna.NetApi.Model.FrameSupport.BoundedVec>
+    public sealed class EventAttributeCleared : BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U32, BaseOpt<Ajuna.NetApi.Model.Types.Primitive.U32>, Ajuna.NetApi.Model.FrameSupport.BoundedVecT2>
     {
     }
     

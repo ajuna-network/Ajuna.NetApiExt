@@ -40,8 +40,8 @@ namespace Ajuna.NetApi.Model.PalletIdentity
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Identity", "SuperOf"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
                             Ajuna.NetApi.Model.Meta.Storage.Hasher.BlakeTwo128Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(BaseTuple<Ajuna.NetApi.Model.SpCore.AccountId32,Ajuna.NetApi.Model.PalletIdentity.EnumData>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Identity", "SubsOf"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
-                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U128,Ajuna.NetApi.Model.FrameSupport.BoundedVec>)));
-            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Identity", "Registrars"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.BoundedVec)));
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U128,Ajuna.NetApi.Model.FrameSupport.BoundedVecT11>)));
+            _client.StorageKeyDict.Add(new System.Tuple<string, string>("Identity", "Registrars"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(null, null, typeof(Ajuna.NetApi.Model.FrameSupport.BoundedVecT12)));
         }
         
         /// <summary>
@@ -115,10 +115,10 @@ namespace Ajuna.NetApi.Model.PalletIdentity
         /// 
         ///  TWOX-NOTE: OK ��� `AccountId` is a secure hash.
         /// </summary>
-        public async Task<BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U128,Ajuna.NetApi.Model.FrameSupport.BoundedVec>> SubsOf(Ajuna.NetApi.Model.SpCore.AccountId32 key, CancellationToken token)
+        public async Task<BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U128,Ajuna.NetApi.Model.FrameSupport.BoundedVecT11>> SubsOf(Ajuna.NetApi.Model.SpCore.AccountId32 key, CancellationToken token)
         {
             string parameters = IdentityStorage.SubsOfParams(key);
-            return await _client.GetStorageAsync<BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U128,Ajuna.NetApi.Model.FrameSupport.BoundedVec>>(parameters, token);
+            return await _client.GetStorageAsync<BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U128,Ajuna.NetApi.Model.FrameSupport.BoundedVecT11>>(parameters, token);
         }
         
         /// <summary>
@@ -140,10 +140,10 @@ namespace Ajuna.NetApi.Model.PalletIdentity
         /// 
         ///  The index into this can be cast to `RegistrarIndex` to get a valid value.
         /// </summary>
-        public async Task<Ajuna.NetApi.Model.FrameSupport.BoundedVec> Registrars(CancellationToken token)
+        public async Task<Ajuna.NetApi.Model.FrameSupport.BoundedVecT12> Registrars(CancellationToken token)
         {
             string parameters = IdentityStorage.RegistrarsParams();
-            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.BoundedVec>(parameters, token);
+            return await _client.GetStorageAsync<Ajuna.NetApi.Model.FrameSupport.BoundedVecT12>(parameters, token);
         }
     }
     

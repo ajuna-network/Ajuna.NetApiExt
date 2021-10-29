@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletContracts
     
     
     /// <summary>
-    /// >> 405 - Composite[pallet_contracts.storage.RawContractInfo]
+    /// >> 414 - Composite[pallet_contracts.storage.RawContractInfo]
     /// </summary>
     public sealed class RawContractInfo : BaseType
     {

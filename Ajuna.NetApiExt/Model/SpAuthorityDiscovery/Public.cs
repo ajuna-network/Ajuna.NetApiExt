@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpAuthorityDiscovery
     
     
     /// <summary>
-    /// >> 207 - Composite[sp_authority_discovery.app.Public]
+    /// >> 211 - Composite[sp_authority_discovery.app.Public]
     /// </summary>
     public sealed class Public : BaseType
     {

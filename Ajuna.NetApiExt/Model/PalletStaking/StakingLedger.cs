@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
     
     
     /// <summary>
-    /// >> 345 - Composite[pallet_staking.StakingLedger]
+    /// >> 352 - Composite[pallet_staking.StakingLedger]
     /// </summary>
     public sealed class StakingLedger : BaseType
     {

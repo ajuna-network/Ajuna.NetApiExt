@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
     
     
     /// <summary>
-    /// >> 348 - Composite[pallet_staking.Nominations]
+    /// >> 355 - Composite[pallet_staking.Nominations]
     /// </summary>
     public sealed class Nominations : BaseType
     {

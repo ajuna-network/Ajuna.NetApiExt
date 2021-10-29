@@ -25,7 +25,7 @@ namespace Ajuna.NetApi.Model.PalletVesting
     }
     
     /// <summary>
-    /// >> 450 - Variant[pallet_vesting.Releases]
+    /// >> 459 - Variant[pallet_vesting.Releases]
     /// </summary>
     public sealed class EnumReleases : BaseEnum<Releases>
     {

@@ -28,7 +28,7 @@ namespace Ajuna.NetApi.Model.FrameSystem
     }
     
     /// <summary>
-    /// >> 456 - Variant[frame_system.RawOrigin]
+    /// >> 465 - Variant[frame_system.RawOrigin]
     /// </summary>
     public sealed class EnumRawOrigin : BaseEnumExt<RawOrigin, BaseVoid, Ajuna.NetApi.Model.SpCore.AccountId32, BaseVoid>
     {

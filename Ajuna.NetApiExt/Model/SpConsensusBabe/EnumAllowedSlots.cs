@@ -27,7 +27,7 @@ namespace Ajuna.NetApi.Model.SpConsensusBabe
     }
     
     /// <summary>
-    /// >> 130 - Variant[sp_consensus_babe.AllowedSlots]
+    /// >> 134 - Variant[sp_consensus_babe.AllowedSlots]
     /// </summary>
     public sealed class EnumAllowedSlots : BaseEnum<AllowedSlots>
     {

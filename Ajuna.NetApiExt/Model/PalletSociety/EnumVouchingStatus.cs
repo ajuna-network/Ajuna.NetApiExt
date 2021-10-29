@@ -25,7 +25,7 @@ namespace Ajuna.NetApi.Model.PalletSociety
     }
     
     /// <summary>
-    /// >> 439 - Variant[pallet_society.VouchingStatus]
+    /// >> 448 - Variant[pallet_society.VouchingStatus]
     /// </summary>
     public sealed class EnumVouchingStatus : BaseEnum<VouchingStatus>
     {

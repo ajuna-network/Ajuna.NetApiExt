@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpConsensusBabe
     
     
     /// <summary>
-    /// >> 125 - Composite[sp_consensus_babe.app.Public]
+    /// >> 129 - Composite[sp_consensus_babe.app.Public]
     /// </summary>
     public sealed class Public : BaseType
     {

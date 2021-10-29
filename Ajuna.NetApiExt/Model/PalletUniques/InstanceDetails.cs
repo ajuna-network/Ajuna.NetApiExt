@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletUniques
     
     
     /// <summary>
-    /// >> 497 - Composite[pallet_uniques.types.InstanceDetails]
+    /// >> 506 - Composite[pallet_uniques.types.InstanceDetails]
     /// </summary>
     public sealed class InstanceDetails : BaseType
     {

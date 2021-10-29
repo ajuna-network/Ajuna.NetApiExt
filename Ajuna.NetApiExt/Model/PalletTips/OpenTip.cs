@@ -20,7 +20,7 @@ namespace Ajuna.NetApi.Model.PalletTips
     
     
     /// <summary>
-    /// >> 478 - Composite[pallet_tips.OpenTip]
+    /// >> 487 - Composite[pallet_tips.OpenTip]
     /// </summary>
     public sealed class OpenTip : BaseType
     {

@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletImOnline
     
     
     /// <summary>
-    /// >> 417 - Composite[pallet_im_online.BoundedOpaqueNetworkState]
+    /// >> 426 - Composite[pallet_im_online.BoundedOpaqueNetworkState]
     /// </summary>
     public sealed class BoundedOpaqueNetworkState : BaseType
     {
@@ -26,14 +26,14 @@ namespace Ajuna.NetApi.Model.PalletImOnline
         /// <summary>
         /// >> peer_id
         /// </summary>
-        private Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec _peerId;
+        private Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT5 _peerId;
         
         /// <summary>
         /// >> external_addresses
         /// </summary>
-        private Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec _externalAddresses;
+        private Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT6 _externalAddresses;
         
-        public Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec PeerId
+        public Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT5 PeerId
         {
             get
             {
@@ -45,7 +45,7 @@ namespace Ajuna.NetApi.Model.PalletImOnline
             }
         }
         
-        public Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec ExternalAddresses
+        public Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT6 ExternalAddresses
         {
             get
             {
@@ -73,9 +73,9 @@ namespace Ajuna.NetApi.Model.PalletImOnline
         public override void Decode(byte[] byteArray, ref int p)
         {
             var start = p;
-            PeerId = new Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec();
+            PeerId = new Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT5();
             PeerId.Decode(byteArray, ref p);
-            ExternalAddresses = new Ajuna.NetApi.Model.FrameSupport.WeakBoundedVec();
+            ExternalAddresses = new Ajuna.NetApi.Model.FrameSupport.WeakBoundedVecT6();
             ExternalAddresses.Decode(byteArray, ref p);
             TypeSize = p - start;
         }

@@ -27,7 +27,7 @@ namespace Ajuna.NetApi.Model.PalletSociety
     }
     
     /// <summary>
-    /// >> 437 - Variant[pallet_society.BidKind]
+    /// >> 446 - Variant[pallet_society.BidKind]
     /// </summary>
     public sealed class EnumBidKind : BaseEnumExt<BidKind, Ajuna.NetApi.Model.Types.Primitive.U128, BaseTuple<Ajuna.NetApi.Model.SpCore.AccountId32, Ajuna.NetApi.Model.Types.Primitive.U128>>
     {

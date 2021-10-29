@@ -25,7 +25,7 @@ namespace Ajuna.NetApi.Model.SpConsensusBabe
     }
     
     /// <summary>
-    /// >> 128 - Variant[sp_consensus_babe.digests.NextConfigDescriptor]
+    /// >> 132 - Variant[sp_consensus_babe.digests.NextConfigDescriptor]
     /// </summary>
     public sealed class EnumNextConfigDescriptor : BaseEnumExt<NextConfigDescriptor, BaseTuple<BaseTuple<Ajuna.NetApi.Model.Types.Primitive.U64,Ajuna.NetApi.Model.Types.Primitive.U64>, Ajuna.NetApi.Model.SpConsensusBabe.EnumAllowedSlots>>
     {

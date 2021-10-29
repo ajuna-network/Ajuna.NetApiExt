@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.SpCore
     
     
     /// <summary>
-    /// >> 236 - Composite[sp_core.OpaquePeerId]
+    /// >> 240 - Composite[sp_core.OpaquePeerId]
     /// </summary>
     public sealed class OpaquePeerId : BaseType
     {

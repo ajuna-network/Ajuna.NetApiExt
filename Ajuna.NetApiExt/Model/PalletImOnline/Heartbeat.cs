@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletImOnline
     
     
     /// <summary>
-    /// >> 234 - Composite[pallet_im_online.Heartbeat]
+    /// >> 238 - Composite[pallet_im_online.Heartbeat]
     /// </summary>
     public sealed class Heartbeat : BaseType
     {

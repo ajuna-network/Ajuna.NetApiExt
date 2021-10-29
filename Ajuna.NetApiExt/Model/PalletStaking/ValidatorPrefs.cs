@@ -19,7 +19,7 @@ namespace Ajuna.NetApi.Model.PalletStaking
     
     
     /// <summary>
-    /// >> 200 - Composite[pallet_staking.ValidatorPrefs]
+    /// >> 204 - Composite[pallet_staking.ValidatorPrefs]
     /// </summary>
     public sealed class ValidatorPrefs : BaseType
     {

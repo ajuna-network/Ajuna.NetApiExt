@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletContracts
     
     
     /// <summary>
-    /// >> 409 - Composite[pallet_contracts.schedule.Limits]
+    /// >> 418 - Composite[pallet_contracts.schedule.Limits]
     /// </summary>
     public sealed class Limits : BaseType
     {

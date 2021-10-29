@@ -18,7 +18,7 @@ namespace Ajuna.NetApi.Model.PalletContracts
     
     
     /// <summary>
-    /// >> 411 - Composite[pallet_contracts.schedule.HostFnWeights]
+    /// >> 420 - Composite[pallet_contracts.schedule.HostFnWeights]
     /// </summary>
     public sealed class HostFnWeights : BaseType
     {

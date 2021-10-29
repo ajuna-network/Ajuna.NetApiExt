@@ -36,9 +36,9 @@ namespace Ajuna.NetApi.Model.PalletProxy
         {
             this._client = client;
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Proxy", "Proxies"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
-                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVec,Ajuna.NetApi.Model.Types.Primitive.U128>)));
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVecT14,Ajuna.NetApi.Model.Types.Primitive.U128>)));
             _client.StorageKeyDict.Add(new System.Tuple<string, string>("Proxy", "Announcements"), new System.Tuple<Ajuna.NetApi.Model.Meta.Storage.Hasher[], System.Type, System.Type>(new Ajuna.NetApi.Model.Meta.Storage.Hasher[] {
-                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVec,Ajuna.NetApi.Model.Types.Primitive.U128>)));
+                            Ajuna.NetApi.Model.Meta.Storage.Hasher.Twox64Concat}, typeof(Ajuna.NetApi.Model.SpCore.AccountId32), typeof(BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVecT15,Ajuna.NetApi.Model.Types.Primitive.U128>)));
         }
         
         /// <summary>
@@ -58,10 +58,10 @@ namespace Ajuna.NetApi.Model.PalletProxy
         ///  The set of account proxies. Maps the account which has delegated to the accounts
         ///  which are being delegated to, together with the amount held on deposit.
         /// </summary>
-        public async Task<BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVec,Ajuna.NetApi.Model.Types.Primitive.U128>> Proxies(Ajuna.NetApi.Model.SpCore.AccountId32 key, CancellationToken token)
+        public async Task<BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVecT14,Ajuna.NetApi.Model.Types.Primitive.U128>> Proxies(Ajuna.NetApi.Model.SpCore.AccountId32 key, CancellationToken token)
         {
             string parameters = ProxyStorage.ProxiesParams(key);
-            return await _client.GetStorageAsync<BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVec,Ajuna.NetApi.Model.Types.Primitive.U128>>(parameters, token);
+            return await _client.GetStorageAsync<BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVecT14,Ajuna.NetApi.Model.Types.Primitive.U128>>(parameters, token);
         }
         
         /// <summary>
@@ -79,10 +79,10 @@ namespace Ajuna.NetApi.Model.PalletProxy
         /// >> Announcements
         ///  The announcements made by the proxy (key).
         /// </summary>
-        public async Task<BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVec,Ajuna.NetApi.Model.Types.Primitive.U128>> Announcements(Ajuna.NetApi.Model.SpCore.AccountId32 key, CancellationToken token)
+        public async Task<BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVecT15,Ajuna.NetApi.Model.Types.Primitive.U128>> Announcements(Ajuna.NetApi.Model.SpCore.AccountId32 key, CancellationToken token)
         {
             string parameters = ProxyStorage.AnnouncementsParams(key);
-            return await _client.GetStorageAsync<BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVec,Ajuna.NetApi.Model.Types.Primitive.U128>>(parameters, token);
+            return await _client.GetStorageAsync<BaseTuple<Ajuna.NetApi.Model.FrameSupport.BoundedVecT15,Ajuna.NetApi.Model.Types.Primitive.U128>>(parameters, token);
         }
     }
     
