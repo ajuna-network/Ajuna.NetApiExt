@@ -4,7 +4,6 @@ using NLog.Targets;
 using NUnit.Framework;
 using Schnorrkel.Keys;
 using Ajuna.NetApi;
-using Ajuna.NetApi.Model.Calls;
 using Ajuna.NetApi.Model.Extrinsics;
 using Ajuna.NetApi.Model.FrameSystem;
 using Ajuna.NetApi.Model.PalletBalances;
@@ -13,7 +12,6 @@ using Ajuna.NetApi.Model.SpCore;
 using Ajuna.NetApi.Model.SpRuntime;
 using Ajuna.NetApi.Model.Types;
 using Ajuna.NetApi.Model.Types.Base;
-using Ajuna.NetApi.Model.Types.Custom;
 using Ajuna.NetApi.Model.Types.Primitive;
 using Ajuna.NetApi.TypeConverters;
 using System;
@@ -61,11 +59,7 @@ namespace ExentsionTest
             // Apply config           
             LogManager.Configuration = config;
 
-            _substrateClient = new SubstrateClientExt(new Uri(WebSocketUrl));
-            
-            // add your generic type converters here
-            //_substrateClient.RegisterTypeConverter(new GenericTypeConverter<EnumType<BoardState>>());
-            
+            _substrateClient = new SubstrateClientExt(new Uri(WebSocketUrl));            
         }
 
         [TearDown]
